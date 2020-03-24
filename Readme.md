@@ -1,7 +1,7 @@
 # Личный проект «Мишка» [![Build status][travis-image]][travis-url] [![Dependency status][dependency-image]][dependency-url]
 
-* Студент: [Марина Беклова](https://up.htmlacademy.ru/adaptive/19/user/1289625).
-* Наставник: `Неизвестно`.
+- Студент: [Марина Беклова](https://up.htmlacademy.ru/adaptive/19/user/1289625).
+- Наставник: [Андрей Островский](https://htmlacademy.ru/profile/grandmaus).
 
 ---
 
