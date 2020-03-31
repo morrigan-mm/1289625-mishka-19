@@ -1,148 +1,131 @@
 <!DOCTYPE html>
 <html lang="ru">
-  <head>
-    <meta charset="utf-8" />
-    <title>HTML Academy: Мишка - Каталог</title>
-  </head>
-  <body>
-    <header class="page-header">
-      <a class="page-header__logo" href="#index.html">
-        <img
-          class="page-header__logo-image"
-          src="https://via.placeholder.com/86x35"
-          width="86"
-          height="35"
-          alt="Логотип магазина «Мишка»"
-        />
-      </a>
-      <nav class="main-nav page-header__nav">
-        <button class="main-nav__toggle" type="button">Открыть меню</button>
-        <ul class="main-nav__list site-list">
-          <li class="site-list__item site-list__item--current">
-            <a href="#">Каталог товаров</a>
-          </li>
-          <li class="site-list__item">
-            <a href="form.html">Вязание на заказ</a>
-          </li>
-          <li class="site-list__item">
-            <form action="https://echo.htmlacademy.ru" method="get">
-              <input
-                type="search"
-                name="search"
-                placeholder="Поиск по сайту"
-                id="user-search"
-              />
-              <label for="user-search">Поиск по сайту</label>
-            </form>
-          </li>
-          <li class="site-list__item">
-            <a href="#">Корзина: <span>пока пуста</span></a>
-          </li>
-        </ul>
-      </nav>
-    </header>
 
-    <main class="page-main">
-      <section class="intro">
-        <h1 class="intro__title">Каталог товаров</h1>
-      </section>
-      <section class="page-section catalog">
-        <ul class="catalog__list">
-          <li class="catalog__item">
-            <a class="card" href="#">
-              <img
-                class="card__image"
-                src="https://via.placeholder.com/260x195"
-                width="260"
-                height="195"
-                alt="Вязаная игрушка заяц"
-              />
-              <h4 class="card__title">Зайчик-попрыгайчик</h4>
-              <p class="card__description">
-                Рост 30 см, вес 200 г
-              </p>
-              <hr class="card__divider" />
-              <div class="card__footer">
-                <div class="card__price"><span>1 200</span> руб.</div>
-                <button class="card__cart" type="button"></button>
-              </div>
-            </a>
-          </li>
-          <li class="catalog__item">
-            <a class="card" href="#">
-              <img
-                class="card__image"
-                src="https://via.placeholder.com/260x195"
-                width="260"
-                height="195"
-                alt="Вязаная корзинка для белья"
-              />
-              <h4 class="card__title">Корзинка для белья</h4>
-              <p class="card__description">
-                Диаметр 15 см, высота 10 см
-              </p>
-              <hr class="card__divider" />
-              <div class="card__footer">
-                <div class="card__price"><span>690</span> руб.</div>
-                <button class="card__cart" type="button"></button>
-              </div>
-            </a>
-          </li>
-          <li class="catalog__item">
-            <a class="card" href="#">
-              <img
-                class="card__image"
-                src="https://via.placeholder.com/260x195"
-                width="260"
-                height="195"
-                alt="Вязаная корзинка для игрушек"
-              />
-              <h4 class="card__title">Большая корзинка для игрушек</h4>
-              <p class="card__description">
-                Диаметр 30 см, высота 30 см
-              </p>
-              <hr class="card__divider" />
-              <div class="card__footer">
-                <div class="card__price"><span>1 500</span> руб.</div>
-                <button class="card__cart" type="button"></button>
-              </div>
-            </a>
-          </li>
-        </ul>
-      </section>
-    </main>
+<head>
+  <meta charset="utf-8">
+  <title>HTML Academy: Мишка - Каталог</title>
+</head>
 
-    <footer class="page-footer">
-      <div class="page-footer__item social">
-        <ul class="social__list">
-          <li class="social__item">
-            <a class="social__link social__link--instagram" href="#"
-              >Инстаграм</a
-            >
-          </li>
-          <li class="social__item">
-            <a class="social__link social__link--facebook" href="#">Фейсбук</a>
-          </li>
-          <li class="social__item">
-            <a class="social__link social__link--twitter" href="#">Твиттер</a>
-          </li>
-        </ul>
-      </div>
-      <div class="page-footer__item copyright">
-        <a
-          class="copyright__link"
-          href="https://htmlacademy.ru/intensive/adaptive"
-        >
-          Разработано:
-          <img
-            class="copyright__icon"
-            src="img/htmlacademy.svg"
-            width="27"
-            height="34"
-            alt="HTML Academy"
-          />
+<body>
+  <header class="page-header">
+    <a class="page-header__logo" href="index.html">
+      <img class="page-header__logo-image" src="https://via.placeholder.com/86x35" width="86" height="35"
+        alt="Логотип магазина «Мишка»">
+    </a>
+    <nav class="main-nav page-header__nav">
+      <button class="main-nav__toggle" type="button">Открыть меню</button>
+      <ul class="main-nav__list site-list">
+        <li class="site-list__item">
+          <a class="site-list__item-link" href="catalog.html">Каталог товаров</a>
+        </li>
+        <li class="site-list__item">
+          <a class="site-list__item-link" href="form.html">Вязание на заказ</a>
+        </li>
+        <li class="site-list__item">
+          <a class="site-list__item-link site-list__item-link--search" href="#">Поиск по сайту</a>
+        </li>
+        <li class="site-list__item">
+          <a class="site-list__item-link site-list__item-link--cart" href="#">
+            Корзина: <span>пока пуста</span>
+          </a>
+        </li>
+      </ul>
+    </nav>
+  </header>
+
+  <main class="page-main">
+    <section class="intro">
+      <h1 class="intro__title">Каталог товаров</h1>
+    </section>
+    <section class="catalog">
+      <ul class="catalog__list">
+        <li class="catalog__item">
+          <div class="card">
+            <a class="card__image-wrapper" href="#">
+              <img class="card__image" src="https://via.placeholder.com/260x195" width="260" height="195"
+                alt="Вязаная игрушка заяц">
+            </a>
+            <a href="#">
+              <h3 class="card__title">Зайчик-попрыгайчик</h3>
+            </a>
+            <p class="card__description">
+              Рост 30 см, вес 200 г
+            </p>
+            <hr class="divider">
+            <div class="card__footer">
+              <div class="card__price"><span>1 200</span> руб.</div>
+              <button class="card__cart" type="button"></button>
+            </div>
+          </div>
+        </li>
+        <li class="catalog__item">
+          <div class="card">
+            <a class="card__image-wrapper" href="#">
+              <img class="card__image" src="https://via.placeholder.com/260x195" width="260" height="195"
+                alt="Вязаная корзинка для белья">
+            </a>
+            <a href="#">
+              <h3 class="card__title">Корзинка для белья</h3>
+            </a>
+            <p class="card__description">
+              Диаметр 15 см, высота 10 см
+            </p>
+            <hr class="divider">
+            <div class="card__footer">
+              <div class="card__price"><span>690</span> руб.</div>
+              <button class="card__cart" type="button"></button>
+            </div>
+          </div>
+        </li>
+        <li class="catalog__item">
+          <div class="card">
+            <a class="card__image-wrapper" href="#">
+              <img class="card__image" src="https://via.placeholder.com/260x195" width="260" height="195"
+                alt="Вязаная корзинка для игрушек">
+            </a>
+            <a href="#">
+              <h3 class="card__title">Большая корзинка для игрушек</h3>
+            </a>
+            <p class="card__description">
+              Диаметр 30 см, высота 30 см
+            </p>
+            <hr class="divider">
+            <div class="card__footer">
+              <div class="card__price"><span>1 500</span> руб.</div>
+              <button class="card__cart" type="button"></button>
+            </div>
+          </div>
+        </li>
+      </ul>
+    </section>
+  </main>
+
+  <footer class="page-footer">
+    <ul class="page-footer__item social">
+      <li class="social__item">
+        <a class="social__link social__link--instagram" href="#">
+          Инстаграм
         </a>
-      </div>
-    </footer>
-  </body>
+      </li>
+      <li class="social__item">
+        <a class="social__link social__link--facebook" href="#">
+          Фейсбук
+        </a>
+      </li>
+      <li class="social__item">
+        <a class="social__link social__link--twitter" href="#">
+          Твиттер
+        </a>
+      </li>
+    </ul>
+    <hr class="divider">
+    <div class="page-footer__item copyright">
+      <a class="copyright__link" href="https://htmlacademy.ru/intensive/adaptive">
+        Разработано:
+        <img class="copyright__icon" src="img/htmlacademy.svg" width="27" height="34" alt="HTML Academy">
+      </a>
+    </div>
+  </footer>
+</body>
+
 </html>
