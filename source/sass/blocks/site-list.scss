@@ -1,0 +1,27 @@
+.site-list {
+  @include list-reset;
+
+  background-color: $white;
+}
+
+.site-list__item {
+  box-shadow: $box-shadow;
+}
+
+.site-list__item-link {
+  @include link-stylize($title-color);
+
+  display: flex;
+  padding: 28px 10px 28px 75px;
+  font-size: 1.7rem;
+  font-weight: bold;
+
+  &:hover,
+  &:focus {
+    color: transparentize($title-color, 0.4);
+  }
+
+  &:active {
+    color: transparentize($title-color, 0.7);
+  }
+}

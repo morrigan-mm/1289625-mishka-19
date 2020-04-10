@@ -1,0 +1,47 @@
+.card__image-wrapper {
+  background-color: #cccccc;
+}
+
+.card__content {
+  border: 1px solid $white-three;
+
+  &:hover,
+  &:focus {
+    box-shadow: 0 6px 10px 0 transparentize($black, 0.9);
+  }
+
+  &:active {
+    box-shadow: 0 3px 5px 0 transparentize($black, 0.9);
+  }
+}
+
+.card__title {
+  font-size: 1.7rem;
+  font-weight: bold;
+  line-height: 1.41;
+  color: $title-color;
+}
+
+.card__title-link {
+  @include link-stylize;
+
+  &:hover,
+  &:focus {
+    color: transparentize($title-color, 0.4);
+  }
+
+  &:active {
+    color: transparentize($title-color, 0.7);
+  }
+}
+
+.card__description {
+  line-height: 2.31;
+}
+
+.card__price {
+  font-size: 1.5rem;
+  font-weight: bold;
+  line-height: 1.6;
+  color: $black;
+}

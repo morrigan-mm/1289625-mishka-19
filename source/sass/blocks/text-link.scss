@@ -1,0 +1,15 @@
+.text-link {
+  @include link-stylize;
+
+  box-shadow: 0 1px 0 0 $emerald-blue;
+
+  &:hover,
+  &:focus {
+    color: $emerald-blue;
+  }
+
+  &:active {
+    color: transparentize($emerald-blue, 0.7);
+    box-shadow: 0 1px 0 0 transparentize($emerald-blue, 0.7);
+  }
+}

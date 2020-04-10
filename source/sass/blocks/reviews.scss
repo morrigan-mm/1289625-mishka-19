@@ -1,0 +1,18 @@
+.reviews__text {
+  font-size: 1.5rem;
+  line-height: 2;
+}
+
+.reviews__author-name {
+  font-size: 1.7rem;
+  font-weight: bold;
+  line-height: 1.41;
+  font-style: normal;
+  color: $title-color;
+}
+
+.reviews__author-email {
+  font-weight: normal;
+  line-height: 1.41;
+  color: $text-color;
+}
