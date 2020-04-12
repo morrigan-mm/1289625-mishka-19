@@ -1,0 +1,16 @@
+.title {
+  font-size: 2.5rem;
+  font-weight: $font-weight-bold;
+  line-height: 1.2;
+  text-align: left;
+  color: $title-color;
+
+  &--secondary {
+    font-size: 1.8rem;
+    line-height: 1.67;
+  }
+
+  &--hidden {
+    @include visually-hidden;
+  }
+}

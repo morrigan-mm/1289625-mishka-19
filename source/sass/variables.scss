@@ -1,0 +1,23 @@
+$font-name: "OpenSans";
+$font-family: $font-name, "Tahoma", sans-serif;
+$font-weight-normal: normal;
+$font-weight-bold: bold;
+
+$white: #ffffff;
+$white-two: #f1f1f1;
+$white-three: #ececec;
+$white-four: #fbfbfb;
+
+$seafoam-blue: #63d1bb;
+$greany-blue: #56c3b2;
+$emerald-blue: #46c1ae;
+
+$light-grey: #e6e6e8;
+$grey: #444444;
+
+$black: #000000;
+
+$box-shadow: 0 1px 0 0 $white-three, inset 0 1px 0 0 $white-three;
+
+$text-color: $grey;
+$title-color: $black;

@@ -4,6 +4,8 @@
 <head>
   <meta charset="utf-8">
   <title>HTML Academy: Мишка - Каталог</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body>
@@ -45,18 +47,20 @@
               <img class="card__image" src="https://via.placeholder.com/260x195" width="260" height="195"
                 alt="Вязаная игрушка заяц">
             </a>
-            <h3 class="card__title">
-              <a class="card__title-link" href="#">
-                Зайчик-попрыгайчик
-              </a>
-            </h3>
-            <p class="card__description">
-              Рост 30 см, вес 200 г
-            </p>
+            <div class="card__content">
+              <h3 class="card__title">
+                <a class="card__title-link" href="#">
+                  Зайчик-попрыгайчик
+                </a>
+              </h3>
+              <p class="card__description">
+                Рост 30 см, вес 200 г
+              </p>
 
-            <div class="card__footer">
-              <div class="card__price"><span>1 200</span> руб.</div>
-              <button class="card__cart" type="button">Добавить в корзину</button>
+              <div class="card__footer">
+                <div class="card__price"><span>1 200</span> руб.</div>
+                <button class="card__cart" type="button">Добавить в корзину</button>
+              </div>
             </div>
           </div>
         </li>
@@ -66,18 +70,20 @@
               <img class="card__image" src="https://via.placeholder.com/260x195" width="260" height="195"
                 alt="Вязаная корзинка для белья">
             </a>
-            <h3 class="card__title">
-              <a class="card__title-link" href="#">
-                Корзинка для белья
-              </a>
-            </h3>
-            <p class="card__description">
-              Диаметр 15 см, высота 10 см
-            </p>
+            <div class="card__content">
+              <h3 class="card__title">
+                <a class="card__title-link" href="#">
+                  Корзинка для белья
+                </a>
+              </h3>
+              <p class="card__description">
+                Диаметр 15 см, высота 10 см
+              </p>
 
-            <div class="card__footer">
-              <div class="card__price"><span>690</span> руб.</div>
-              <button class="card__cart" type="button">Добавить в корзину</button>
+              <div class="card__footer">
+                <div class="card__price"><span>690</span> руб.</div>
+                <button class="card__cart" type="button">Добавить в корзину</button>
+              </div>
             </div>
           </div>
         </li>
@@ -87,18 +93,20 @@
               <img class="card__image" src="https://via.placeholder.com/260x195" width="260" height="195"
                 alt="Вязаная корзинка для игрушек">
             </a>
-            <h3 class="card__title">
-              <a class="card__title-link" href="#">
-                Большая корзинка для игрушек
-              </a>
-            </h3>
-            <p class="card__description">
-              Диаметр 30 см, высота 30 см
-            </p>
+            <div class="card__content">
+              <h3 class="card__title">
+                <a class="card__title-link" href="#">
+                  Большая корзинка для игрушек
+                </a>
+              </h3>
+              <p class="card__description">
+                Диаметр 30 см, высота 30 см
+              </p>
 
-            <div class="card__footer">
-              <div class="card__price"><span>1 500</span> руб.</div>
-              <button class="card__cart" type="button">Добавить в корзину</button>
+              <div class="card__footer">
+                <div class="card__price"><span>1 500</span> руб.</div>
+                <button class="card__cart" type="button">Добавить в корзину</button>
+              </div>
             </div>
           </div>
         </li>
@@ -113,10 +121,12 @@
         </a>
         <button class="player__button" type="button">Запустить видео</button>
       </div>
-      <p class="video__text">
-        По просьбам наших любимых фолловеров мы сняли для вас подробное видео о том, как появляются наши товары.
-      </p>
-      <a class="video__button button" href="form.html">Сделать заказ</a>
+      <div class="video__description">
+        <p class="video__text">
+          По просьбам наших любимых фолловеров мы сняли для вас подробное видео о том, как появляются наши товары.
+        </p>
+        <a class="video__button button" href="form.html">Сделать заказ</a>
+      </div>
     </section>
   </main>
 
@@ -155,18 +165,15 @@
           <legend class="cart-form__title">Выберите размер:</legend>
           <ul class="cart-form__list" role="none">
             <li class="cart-form__item">
-              <input class="cart-form__input cart-form__input--hidden" type="radio" name="size" value="small"
-                id="small">
+              <input class="cart-form__input" type="radio" name="size" value="small" id="small">
               <label class="cart-form__label" for="small">S</label>
             </li>
             <li class="cart-form__item">
-              <input class="cart-form__input cart-form__input--hidden" type="radio" name="size" value="medium"
-                id="medium">
+              <input class="cart-form__input" type="radio" name="size" value="medium" id="medium">
               <label class="cart-form__label" for="medium">M</label>
             </li>
             <li class="cart-form__item">
-              <input class="cart-form__input cart-form__input--hidden" type="radio" name="size" value="large"
-                id="large">
+              <input class="cart-form__input" type="radio" name="size" value="large" id="large">
               <label class="cart-form__label" for="large">L</label>
             </li>
           </ul>

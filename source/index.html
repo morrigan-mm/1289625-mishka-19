@@ -4,6 +4,8 @@
 <head>
   <meta charset="utf-8">
   <title>HTML Academy: Мишка</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body>
@@ -35,7 +37,7 @@
 
   <main class="page-main">
     <section class="intro intro--main">
-      <h1 class="intro__title">Милые штуки ручной работы для дома</h1>
+      <h1 class="intro__title">Милые штуки ручной работы&nbsp;для&nbsp;дома</h1>
       <div class="category-links">
         <a class="category-links__item category-links__item--furniture" href="#">Предметы интерьера</a>
         <a class="category-links__item category-links__item--toys" href="#">Детские игрушки</a>
@@ -69,7 +71,7 @@
           alt="Набор вязаных корзинок ручной работы">
       </div>
       <p class="promo__price">Цена: <span>990</span> руб.</p>
-      <a class="promo__button button" href="#">
+      <a class="button promo__button" href="#">
         Заказать
       </a>
     </section>
@@ -110,7 +112,7 @@
             </p>
             <cite class="reviews__author-name">
               Анастасия Красильникова
-              <span class="review__author-email">@misssssiskras</span>
+              <span class="reviews__author-email">@misssssiskras</span>
             </cite>
           </blockquote>
           <button class="slider__button slider__button--prev" type="button">
@@ -129,14 +131,14 @@
       </h2>
       <table class="contacts__info table">
         <tr>
-          <td>e-mail:</td>
-          <td>
-            <a href="mailto:info@mimimishkashop.ru">info@mimimishkashop.ru</a>
+          <td class="contacts__info-title">e-mail:</td>
+          <td class="contacts__info-content">
+            <a class="text-link" href="mailto:info@mimimishkashop.ru" target="_blank">info@mimimishkashop.ru</a>
           </td>
         </tr>
         <tr>
-          <td>адрес:</td>
-          <td>
+          <td class="contacts__info-title">адрес:</td>
+          <td class="contacts__info-content">
             г. Санкт-Петербург, ул. Большая Конюшенная, д. 19/8, офис 101
           </td>
         </tr>
@@ -187,18 +189,15 @@
           <legend class="cart-form__title">Выберите размер:</legend>
           <ul class="cart-form__list" role="none">
             <li class="cart-form__item">
-              <input class="cart-form__input cart-form__input--hidden" type="radio" name="size" value="small"
-                id="small">
+              <input class="cart-form__input" type="radio" name="size" value="small" id="small">
               <label class="cart-form__label" for="small">S</label>
             </li>
             <li class="cart-form__item">
-              <input class="cart-form__input cart-form__input--hidden" type="radio" name="size" value="medium"
-                id="medium">
+              <input class="cart-form__input" type="radio" name="size" value="medium" id="medium">
               <label class="cart-form__label" for="medium">M</label>
             </li>
             <li class="cart-form__item">
-              <input class="cart-form__input cart-form__input--hidden" type="radio" name="size" value="large"
-                id="large">
+              <input class="cart-form__input" type="radio" name="size" value="large" id="large">
               <label class="cart-form__label" for="large">L</label>
             </li>
           </ul>

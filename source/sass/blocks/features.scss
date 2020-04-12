@@ -1,0 +1,12 @@
+.features__list {
+  @include list-reset;
+}
+
+.features__item {
+  padding-top: 55px;
+  padding-bottom: 25px;
+  font-size: 1.7rem;
+  font-weight: $font-weight-bold;
+  line-height: 1.18;
+  color: $title-color;
+}

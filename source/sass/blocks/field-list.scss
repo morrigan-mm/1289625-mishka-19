@@ -1,0 +1,7 @@
+.field-list {
+  @include list-reset;
+}
+
+.field-list__item {
+  padding-top: 20px;
+}

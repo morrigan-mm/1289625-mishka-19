@@ -1,0 +1,25 @@
+.cart-form__content {
+  border: none;
+}
+
+.cart-form__title {
+  font-size: 1.5rem;
+  line-height: 2;
+  border: none;
+}
+
+.cart-form__list {
+  @include list-reset;
+}
+
+.cart-form__input {
+  @include visually-hidden;
+}
+
+.cart-form__label {
+  padding: 20px;
+  font-size: 1.7rem;
+  font-weight: $font-weight-bold;
+  line-height: 0.94;
+  border: 2px solid $white-three;
+}

@@ -1,0 +1,97 @@
+.field__label {
+  position: relative;
+  display: flex;
+  align-items: center;
+  font-size: 1.7rem;
+  font-weight: $font-weight-bold;
+  line-height: 1.06;
+  color: $title-color;
+
+  &--checkbox::before,
+  &--radio::before {
+    content: "";
+    width: 40px;
+    height: 40px;
+    margin-right: 22px;
+    border: 2px solid $grey;
+  }
+
+  &--checkbox:hover::before,
+  &--radio:hover::before,
+  &--checkbox:focus::before,
+  &--radio:focus::before {
+    border-color: #62d1ba;
+  }
+
+  &--checkbox:active::before,
+  &--radio:active::before {
+    border-color: transparentize($grey, 0.7);
+  }
+
+  &--radio::before {
+    border-radius: 50%;
+  }
+
+  &--checkbox::after,
+  &--radio::after {
+    position: absolute;
+    content: "";
+    visibility: hidden;
+  }
+
+  &--checkbox::after {
+    top: 20px - 15px / 2;
+    left: 20px - 20px / 2;
+    width: 20px;
+    height: 10px;
+    border-left: 2px solid $grey;
+    border-bottom: 2px solid $grey;
+    transform: rotate(-45deg);
+  }
+
+  &--radio::after {
+    left: 20px - 16px / 2;
+    width: 16px;
+    height: 16px;
+    background-color: #62d1ba;
+    border-radius: 50%;
+  }
+}
+
+.field__input {
+  font-size: 1.7rem;
+  line-height: 1.06;
+  color: $text-color;
+  border: none;
+  border-bottom: 2px solid $black;
+
+  &--hidden {
+    @include visually-hidden;
+  }
+
+  &:hover,
+  &:focus,
+  &:active {
+    border-bottom-color: #62d1ba;
+  }
+
+  &--textbox {
+    font-family: inherit;
+    border: 2px solid $black;
+    resize: none;
+
+    &:hover,
+    &:focus,
+    &:active {
+      border-color: #62d1ba;
+    }
+  }
+
+  &::placeholder {
+    color: transparentize($text-color, 0.7);
+  }
+
+  &:checked ~ .field__label::after {
+    visibility: visible;
+  }
+}

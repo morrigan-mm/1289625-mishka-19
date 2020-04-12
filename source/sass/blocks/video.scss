@@ -1,0 +1,24 @@
+.video {
+  border: 1px solid $white-three;
+}
+
+.video__title {
+  padding-left: 91px;
+  font-size: 1.7rem;
+  font-weight: $font-weight-bold;
+  line-height: 1.41;
+  color: $title-color;
+}
+
+.video__description {
+  border-top: 1px solid $white-three;
+
+  &:hover,
+  &:focus {
+    box-shadow: 0 6px 10px 0 transparentize($black, 0.9);
+  }
+
+  &:active {
+    box-shadow: 0 3px 5px 0 transparentize($black, 0.9);
+  }
+}
