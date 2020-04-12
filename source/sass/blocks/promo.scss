@@ -1,6 +1,6 @@
 .promo__type {
   font-size: 1.7rem;
-  font-weight: bold;
+  font-weight: $font-weight-bold;
   line-height: 1.18;
   text-transform: uppercase;
   color: $seafoam-blue;
@@ -13,7 +13,7 @@
 
 .promo__price {
   font-size: 1.8rem;
-  font-weight: bold;
+  font-weight: $font-weight-bold;
 }
 
 .promo__button {

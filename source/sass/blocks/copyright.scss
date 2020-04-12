@@ -2,6 +2,6 @@
   @include link-stylize($title-color);
 
   font-size: 1.9rem;
-  font-weight: bold;
+  font-weight: $font-weight-bold;
   line-height: 0.95;
 }
