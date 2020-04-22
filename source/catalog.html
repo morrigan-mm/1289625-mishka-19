@@ -10,29 +10,42 @@
 
 <body>
   <header class="page-header">
-    <a class="page-header__logo" href="index.html">
-      <img class="page-header__logo-image" src="https://via.placeholder.com/86x35" width="86" height="35"
-        alt="Логотип магазина «Мишка»">
-    </a>
-    <nav class="main-nav page-header__nav">
-      <button class="main-nav__toggle" type="button">Открыть меню</button>
-      <ul class="main-nav__list site-list">
-        <li class="site-list__item">
-          <a class="site-list__item-link" href="catalog.html">Каталог товаров</a>
-        </li>
-        <li class="site-list__item">
-          <a class="site-list__item-link" href="form.html">Вязание на заказ</a>
-        </li>
-        <li class="site-list__item">
-          <a class="site-list__item-link site-list__item-link--search" href="#">Поиск по сайту</a>
-        </li>
-        <li class="site-list__item">
-          <a class="site-list__item-link site-list__item-link--cart" href="#">
-            Корзина: <span>пока пуста</span>
-          </a>
-        </li>
-      </ul>
-    </nav>
+    <div class="page-header__container">
+      <nav class="page-header__nav">
+        <a class="page-header__nav-item page-header__logo" href="index.html">
+          <img class="page-header__logo-image" src="https://via.placeholder.com/86x35" width="86" height="35"
+            alt="Логотип магазина «Мишка»">
+        </a>
+        <ul class="page-header__nav-item site-navigation">
+          <li class="site-navigation__item">
+            <a class="site-navigation__link" href="catalog.html">Каталог товаров</a>
+          </li>
+          <li class="site-navigation__item">
+            <a class="site-navigation__link" href="form.html">Вязание на заказ</a>
+          </li>
+          <li class="site-navigation__item site-navigation__item--below">
+            <a class="site-navigation__link" href="#">Новые поступления</a>
+          </li>
+          <li class="site-navigation__item site-navigation__item--below">
+            <a class="site-navigation__link" href="#">Распродажа</a>
+          </li>
+        </ul>
+        <ul class="page-header__nav-item user-navigation">
+          <li class="user-navigation__item">
+            <a class="user-navigation__link user-navigation__link--search" href="#">Поиск по сайту</a>
+          </li>
+          <li class="user-navigation__item">
+            <a class="user-navigation__link user-navigation__link--cart" href="#">
+              Корзина:&nbsp;<span>пока пуста</span>
+            </a>
+          </li>
+          <li class="user-navigation__item">
+            <p class="user-navigation__text">Бесплатная доставка по России</p>
+          </li>
+        </ul>
+      </nav>
+      <button class="page-header__toggle page-header__toggle--active" type="button">Открыть меню</button>
+    </div>
   </header>
 
   <main class="page-main">
@@ -113,53 +126,63 @@
       </ul>
     </section>
     <section class="video">
-      <h3 class="video__title">Процесс производства</h3>
-      <div class="video__content player">
-        <a class="player__link" href="#">
-          <img class="player__media" src="https://via.placeholder.com/260x150" width="260" height="150"
-            alt="Процесс производства">
-        </a>
-        <button class="player__button" type="button">Запустить видео</button>
-      </div>
-      <div class="video__description">
-        <p class="video__text">
-          По просьбам наших любимых фолловеров мы сняли для вас подробное видео о том, как появляются наши товары.
-        </p>
-        <a class="video__button button" href="form.html">Сделать заказ</a>
+      <div class="video__card">
+        <div class="video__container">
+          <h3 class="video__title">Процесс производства</h3>
+          <div class="video__content player">
+            <img class="player__media" src="https://via.placeholder.com/260x150" width="260" height="150"
+              alt="Процесс производства">
+            <button class="player__button" type="button">Запустить видео</button>
+          </div>
+          <div class="video__description">
+            <p class="video__text">
+              По просьбам наших любимых фолловеров мы сняли для вас подробное видео о том, как появляются наши товары.
+            </p>
+            <a class="video__button button" href="form.html">Сделать заказ</a>
+          </div>
+        </div>
       </div>
     </section>
   </main>
 
   <footer class="page-footer">
-    <ul class="page-footer__item social">
-      <li class="social__item">
-        <a class="social__link social__link--instagram" href="#">
-          Инстаграм
-        </a>
-      </li>
-      <li class="social__item">
-        <a class="social__link social__link--facebook" href="#">
-          Фейсбук
-        </a>
-      </li>
-      <li class="social__item">
-        <a class="social__link social__link--twitter" href="#">
-          Твиттер
-        </a>
-      </li>
-    </ul>
-
-    <div class="page-footer__item copyright">
-      <a class="copyright__link" href="https://htmlacademy.ru/intensive/adaptive" target="_blank">
-        Разработано:
-        <img class="copyright__icon" src="img/htmlacademy.svg" width="27" height="34" alt="HTML Academy">
+    <div class="page-footer__container">
+      <a class="page-footer__item page-footer__logo" href="index.html">
+        <img class="page-header__logo-image" src="https://via.placeholder.com/102x34" width="102" height="34"
+          alt="Логотип магазина «Мишка»">
       </a>
+      <ul class="page-footer__item social">
+        <li class="social__item">
+          <a class="social__link social__link--instagram" href="#">
+            Инстаграм
+          </a>
+        </li>
+        <li class="social__item">
+          <a class="social__link social__link--facebook" href="#">
+            Фейсбук
+          </a>
+        </li>
+        <li class="social__item">
+          <a class="social__link social__link--twitter" href="#">
+            Твиттер
+          </a>
+        </li>
+      </ul>
+
+      <div class="page-footer__item page-footer__copyright copyright">
+        <a class="copyright__link" href="https://htmlacademy.ru/intensive/adaptive" target="_blank">
+          Разработано
+          <img class="copyright__icon" src="img/htmlacademy.svg" width="27" height="34" alt="HTML Academy">
+        </a>
+      </div>
     </div>
   </footer>
+
+  <!-- показать модальное окно по классу "modal--show" -->
   <section class="modal">
     <div class="modal__overlay"></div>
     <div class="modal__window">
-      <h2 class="modal__window-title title">Добавить в корзину</h2>
+      <h2 class="modal__window-title">Добавить в корзину</h2>
       <form class="modal__window-content cart-form" action="https://echo.htmlacademy.ru" method="post" target="_blank">
         <fieldset class="cart-form__content">
           <legend class="cart-form__title">Выберите размер:</legend>
@@ -178,7 +201,7 @@
             </li>
           </ul>
         </fieldset>
-        <button class="cart-form__button button" type="submit">Добавить</button>
+        <button class="cart-form__button button button--seafoam-blue" type="submit">Добавить</button>
       </form>
     </div>
   </section>

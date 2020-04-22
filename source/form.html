@@ -10,29 +10,42 @@
 
 <body>
   <header class="page-header">
-    <a class="page-header__logo" href="index.html">
-      <img class="page-header__logo-image" src="https://via.placeholder.com/86x35" width="86" height="35"
-        alt="Логотип магазина «Мишка»">
-    </a>
-    <nav class="main-nav page-header__nav">
-      <button class="main-nav__toggle" type="button">Открыть меню</button>
-      <ul class="main-nav__list site-list">
-        <li class="site-list__item">
-          <a class="site-list__item-link" href="catalog.html">Каталог товаров</a>
-        </li>
-        <li class="site-list__item">
-          <a class="site-list__item-link" href="form.html">Вязание на заказ</a>
-        </li>
-        <li class="site-list__item">
-          <a class="site-list__item-link site-list__item-link--search" href="#">Поиск по сайту</a>
-        </li>
-        <li class="site-list__item">
-          <a class="site-list__item-link site-list__item-link--cart" href="#">
-            Корзина: <span>пока пуста</span>
-          </a>
-        </li>
-      </ul>
-    </nav>
+    <div class="page-header__container">
+      <nav class="page-header__nav">
+        <a class="page-header__nav-item page-header__logo" href="index.html">
+          <img class="page-header__logo-image" src="https://via.placeholder.com/86x35" width="86" height="35"
+            alt="Логотип магазина «Мишка»">
+        </a>
+        <ul class="page-header__nav-item site-navigation">
+          <li class="site-navigation__item">
+            <a class="site-navigation__link" href="catalog.html">Каталог товаров</a>
+          </li>
+          <li class="site-navigation__item">
+            <a class="site-navigation__link" href="form.html">Вязание на заказ</a>
+          </li>
+          <li class="site-navigation__item site-navigation__item--below">
+            <a class="site-navigation__link" href="#">Новые поступления</a>
+          </li>
+          <li class="site-navigation__item site-navigation__item--below">
+            <a class="site-navigation__link" href="#">Распродажа</a>
+          </li>
+        </ul>
+        <ul class="page-header__nav-item user-navigation">
+          <li class="user-navigation__item">
+            <a class="user-navigation__link user-navigation__link--search" href="#">Поиск по сайту</a>
+          </li>
+          <li class="user-navigation__item">
+            <a class="user-navigation__link user-navigation__link--cart" href="#">
+              Корзина:&nbsp;<span>пока пуста</span>
+            </a>
+          </li>
+          <li class="user-navigation__item">
+            <p class="user-navigation__text">Бесплатная доставка по России</p>
+          </li>
+        </ul>
+      </nav>
+      <button class="page-header__toggle page-header__toggle--active" type="button">Открыть меню</button>
+    </div>
   </header>
 
   <main class="page-main">
@@ -51,7 +64,7 @@
           <legend class="form__group-title">
             <span class="form__group-label">Тип</span>
           </legend>
-          <ul class="form__group-content field-list" role="none">
+          <ul class="form__group-content field-list field-list--radio" role="none">
             <li class="field-list__item field">
               <input class="field__input field__input--hidden" type="radio" name="type" value="accessories"
                 id="accessories" checked>
@@ -67,7 +80,7 @@
           <legend class="form__group-title">
             <span class="form__group-label">Цвет</span>
           </legend>
-          <ul class="form__group-content field-list" role="none">
+          <ul class="form__group-content field-list field-list--checkbox" role="none">
             <li class="field-list__item field">
               <input class="field__input field__input--hidden" type="checkbox" name="color" value="white" id="white"
                 checked>
@@ -101,17 +114,17 @@
           <legend class="form__group-title">
             <span class="form__group-label">ФИО</span>
           </legend>
-          <ul class="form__group-content field-list" role="none">
-            <li class="field-list__item field">
+          <ul class="form__group-content field-list field-list--textfield" role="none">
+            <li class="field-list__item field-list__item--textfield field">
               <label class="field__label" for="name">Имя:</label>
               <input class="field__input" type="text" name="name" id="name" placeholder="Введите ваше имя*" required>
             </li>
-            <li class="field-list__item field">
+            <li class="field-list__item field-list__item--textfield field">
               <label class="field__label" for="surname">Фамилия:</label>
               <input class="field__input" type="text" name="surname" id="surname" placeholder="Укажите фамилию*"
                 required>
             </li>
-            <li class="field-list__item field">
+            <li class="field-list__item field-list__item--textfield field">
               <label class="field__label" for="patronymic">Отчество:</label>
               <input class="field__input" type="text" name="patronymic" id="patronymic"
                 placeholder="Отчество, если желаете">
@@ -120,7 +133,7 @@
         </fieldset>
         <fieldset class="form__group">
           <legend class="form__group-title form__group-title--hidden">Контакты</legend>
-          <div class="form__group-content">
+          <div class="form__group-content form__group-content--contacts">
             <label class="form__group-title" for="phone">
               <span class="form__group-label">Тел</span>
             </label>
@@ -129,7 +142,7 @@
                 placeholder="+7 ХХХ ХХХ ХХ ХХ*" required>
             </div>
           </div>
-          <div class="form__group-content">
+          <div class="form__group-content form__group-content--contacts">
             <label class="form__group-title" for="e-mail">
               <span class="form__group-label">E-mail</span>
             </label>
@@ -148,38 +161,46 @@
               placeholder="Опишите все ваши пожелания к заказу"></textarea>
           </div>
         </div>
-        <small class="form__footnote">
-          *Поля обязательны для заполнения
-        </small>
-        <button class="form__submit button" type="submit">Отправить заказ</button>
+        <div class="form__footer">
+          <small class="form__footnote">
+            *Поля обязательны для заполнения
+          </small>
+          <button class="form__submit button" type="submit">Отправить заказ</button>
+        </div>
       </form>
     </section>
   </main>
 
   <footer class="page-footer">
-    <ul class="page-footer__item social">
-      <li class="social__item">
-        <a class="social__link social__link--instagram" href="#">
-          Инстаграм
-        </a>
-      </li>
-      <li class="social__item">
-        <a class="social__link social__link--facebook" href="#">
-          Фейсбук
-        </a>
-      </li>
-      <li class="social__item">
-        <a class="social__link social__link--twitter" href="#">
-          Твиттер
-        </a>
-      </li>
-    </ul>
-
-    <div class="page-footer__item copyright">
-      <a class="copyright__link" href="https://htmlacademy.ru/intensive/adaptive" target="_blank">
-        Разработано:
-        <img class="copyright__icon" src="img/htmlacademy.svg" width="27" height="34" alt="HTML Academy">
+    <div class="page-footer__container">
+      <a class="page-footer__item page-footer__logo" href="index.html">
+        <img class="page-header__logo-image" src="https://via.placeholder.com/102x34" width="102" height="34"
+          alt="Логотип магазина «Мишка»">
       </a>
+      <ul class="page-footer__item social">
+        <li class="social__item">
+          <a class="social__link social__link--instagram" href="#">
+            Инстаграм
+          </a>
+        </li>
+        <li class="social__item">
+          <a class="social__link social__link--facebook" href="#">
+            Фейсбук
+          </a>
+        </li>
+        <li class="social__item">
+          <a class="social__link social__link--twitter" href="#">
+            Твиттер
+          </a>
+        </li>
+      </ul>
+
+      <div class="page-footer__item page-footer__copyright copyright">
+        <a class="copyright__link" href="https://htmlacademy.ru/intensive/adaptive" target="_blank">
+          Разработано
+          <img class="copyright__icon" src="img/htmlacademy.svg" width="27" height="34" alt="HTML Academy">
+        </a>
+      </div>
     </div>
   </footer>
 </body>

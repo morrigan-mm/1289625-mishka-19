@@ -1,4 +1,5 @@
 .title {
+  position: relative;
   font-size: 2.5rem;
   font-weight: $font-weight-bold;
   line-height: 1.2;
@@ -6,11 +7,54 @@
   color: $title-color;
 
   &--secondary {
+    margin: 20px 0;
     font-size: 1.8rem;
     line-height: 1.67;
   }
 
   &--hidden {
     @include visually-hidden;
+  }
+
+  &--iconed {
+    &::after {
+      position: absolute;
+      top: 0;
+      left: 100%;
+      width: 47px;
+      height: 81px;
+      margin-left: auto;
+      background: url("https://via.placeholder.com/47x81") no-repeat top center;
+    }
+  }
+}
+
+@media (min-width: $tablet-width) {
+  .title {
+    width: 80%;
+    font-size: 4.3rem;
+    line-height: 1.16;
+
+    &--iconed {
+      width: 100%;
+      padding-right: 50px;
+
+      &::after {
+        content: "";
+      }
+    }
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .title {
+    font-size: 5.3rem;
+    line-height: 1.08;
+
+    &--iconed {
+      &::after {
+        left: -110px;
+      }
+    }
   }
 }

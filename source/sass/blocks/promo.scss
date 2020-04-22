@@ -1,4 +1,10 @@
+.promo {
+  @include container;
+  @include container-indent;
+}
+
 .promo__type {
+  margin-top: -15px;
   font-size: 1.7rem;
   font-weight: $font-weight-bold;
   line-height: 1.18;
@@ -8,14 +14,103 @@
 
 .promo__text,
 .promo__info {
+  margin: 0;
   font-size: 1.5rem;
+}
+
+.promo__info {
+  width: 100%;
+  margin: 10px 0;
+}
+
+.promo__info-row {
+  height: 40px;
+  box-shadow: 0 1px 0 0 $white-three;
+}
+
+.promo__info-title {
+  width: 90px;
+}
+
+.promo__image-wrapper {
+  line-height: 0;
+  background-color: $white-three;
 }
 
 .promo__price {
   font-size: 1.8rem;
   font-weight: $font-weight-bold;
+  text-align: center;
 }
 
 .promo__button {
+  width: 100%;
   line-height: 1.11;
+}
+
+@media (min-width: $tablet-width) {
+  .promo {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .promo__type {
+    align-self: center;
+    width: 100px;
+    margin: 0 0 0 auto;
+    padding: 10px;
+    line-height: 1;
+    text-align: center;
+  }
+
+  .promo__text {
+    font-size: 1.7rem;
+    line-height: 1.76;
+  }
+
+  .promo__text-wrapper,
+  .promo__image-wrapper,
+  .promo__footer {
+    width: 50%;
+  }
+
+  .promo__text-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    padding-right: $tablet-padding;
+    padding-bottom: 118px;
+  }
+
+  .promo__image-wrapper {
+    width: 333px;
+    height: 404px;
+  }
+
+  .promo__footer {
+    margin-top: -118px;
+    padding-right: $tablet-padding;
+  }
+
+  .promo__price {
+    font-size: 2rem;
+    line-height: 1.2;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .promo__type {
+    order: -1;
+    margin: 0 50px 0 -150px;
+  }
+
+  .promo__text-wrapper,
+  .promo__footer {
+    width: 40%;
+  }
+
+  .promo__image-wrapper {
+    width: 525px;
+    height: 636px;
+    margin-top: -95px;
+  }
 }

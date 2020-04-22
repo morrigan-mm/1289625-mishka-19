@@ -1,0 +1,11 @@
+.filters {
+  @include container;
+  @include container-indent-both;
+}
+
+@media (min-width: $tablet-width) {
+  .filters__text {
+    font-size: 1.7rem;
+    line-height: 1.76;
+  }
+}

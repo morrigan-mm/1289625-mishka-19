@@ -10,7 +10,7 @@
   &--checkbox::before,
   &--radio::before {
     content: "";
-    width: 40px;
+    flex: 0 0 40px;
     height: 40px;
     margin-right: 22px;
     border: 2px solid $grey;
@@ -59,6 +59,8 @@
 }
 
 .field__input {
+  width: 100%;
+  min-height: 52px;
   font-size: 1.7rem;
   line-height: 1.06;
   color: $text-color;
@@ -76,6 +78,8 @@
   }
 
   &--textbox {
+    margin-top: 16px;
+    padding: 20px 15px;
     font-family: inherit;
     border: 2px solid $black;
     resize: none;
@@ -93,5 +97,35 @@
 
   &:checked ~ .field__label::after {
     visibility: visible;
+  }
+}
+
+@media (min-width: $tablet-width) {
+  .field__label {
+    margin-right: 26px;
+    font-size: 1.9rem;
+    line-height: 0.95;
+
+    &--radio::before {
+      flex-basis: 53px;
+      height: 53px;
+    }
+
+    &--checkbox::before {
+      flex-basis: 54px;
+      height: 52px;
+    }
+
+    &--radio::after {
+      left: (53px - 22px) / 2;
+      width: 22px;
+      height: 22px;
+    }
+
+    &--checkbox::after {
+      left: (54px - 25px) / 2;
+      width: 30px;
+      height: 17px;
+    }
   }
 }

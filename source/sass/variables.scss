@@ -17,7 +17,15 @@ $grey: #444444;
 
 $black: #000000;
 
-$box-shadow: 0 1px 0 0 $white-three, inset 0 1px 0 0 $white-three;
+$mobile-width: 320px;
+$tablet-width: 768px;
+$desktop-width: 1150px;
+
+$mobile-padding: 30px;
+$tablet-padding: 50px;
+$desktop-padding: 50px;
+
+$padding-indent-desktop: 225px;
 
 $text-color: $grey;
 $title-color: $black;

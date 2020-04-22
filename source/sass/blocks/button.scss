@@ -1,10 +1,12 @@
 .button {
   @include link-stylize;
 
-  padding: 12px;
+  display: inline-block;
+  padding: 16px;
   font-size: 1.7rem;
   font-weight: $font-weight-bold;
   line-height: 0.94;
+  text-align: center;
   text-transform: uppercase;
   background-color: transparent;
   border: 2px solid $grey;
@@ -17,5 +19,17 @@
 
   &:active {
     color: transparentize($white, 0.7);
+  }
+
+  &--seafoam-blue {
+    color: $white;
+    background-color: $seafoam-blue;
+    border-color: $seafoam-blue;
+
+    &:hover,
+    &:focus {
+      background-color: transparentize($seafoam-blue, 0.4);
+      border-color: transparentize($seafoam-blue, 0.7);
+    }
   }
 }

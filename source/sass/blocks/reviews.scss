@@ -1,4 +1,14 @@
+.reviews {
+  @include container;
+  @include container-indent;
+}
+
+.reviews__item {
+  margin: 0;
+}
+
 .reviews__text {
+  margin: 5px 0 30px;
   font-size: 1.5rem;
   line-height: 2;
 }
@@ -15,4 +25,41 @@
   font-weight: $font-weight-normal;
   line-height: 1.41;
   color: $text-color;
+}
+
+.reviews__button {
+  width: 100%;
+  margin-top: 38px;
+}
+
+@media (min-width: $tablet-width) {
+  .reviews {
+    position: relative;
+    padding-bottom: 50px;
+  }
+
+  .reviews__text {
+    margin-bottom: 65px;
+    font-size: 1.7rem;
+    line-height: 1.76;
+  }
+
+  .reviews__author-name {
+    font-size: 1.8rem;
+    line-height: 1.33;
+  }
+
+  .reviews__author-email {
+    display: block;
+    font-size: 1.7rem;
+    line-height: 1.76;
+  }
+
+  .reviews__button {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 175px;
+    margin: 0 $tablet-padding 0;
+  }
 }

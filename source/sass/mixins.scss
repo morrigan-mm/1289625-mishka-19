@@ -20,3 +20,46 @@
   overflow: hidden;
   clip: rect(1px, 1px, 1px, 1px);
 }
+
+@mixin container-padding {
+  padding-left: $mobile-padding;
+  padding-right: $mobile-padding;
+
+  @media (min-width: $tablet-width) {
+    padding-left: $tablet-padding;
+    padding-right: $tablet-padding;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding-left: $desktop-padding;
+    padding-right: $desktop-padding;
+  }
+}
+
+@mixin container {
+  @include container-padding;
+
+  width: $mobile-width;
+  margin: 0 auto;
+
+  @media (min-width: $tablet-width) {
+    width: $tablet-width;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: $desktop-width;
+  }
+}
+
+@mixin container-indent {
+  @media (min-width: $desktop-width) {
+    padding-left: $padding-indent-desktop;
+  }
+}
+
+@mixin container-indent-both {
+  @media (min-width: $desktop-width) {
+    padding-left: $padding-indent-desktop;
+    padding-right: $padding-indent-desktop;
+  }
+}

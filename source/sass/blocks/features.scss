@@ -1,12 +1,35 @@
+.features {
+  @include container;
+  @include container-indent-both;
+}
+
 .features__list {
   @include list-reset;
 }
 
 .features__item {
-  padding-top: 55px;
-  padding-bottom: 25px;
+  padding-top: 64px;
+  padding-bottom: 19px;
   font-size: 1.7rem;
   font-weight: $font-weight-bold;
   line-height: 1.18;
   color: $title-color;
+}
+
+@media (min-width: $tablet-width) {
+  .features__list {
+    columns: 2;
+  }
+
+  .features__item {
+    padding-right: 35px;
+    font-size: 2rem;
+    line-height: 1.1;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .features__item {
+    padding-right: 50px;
+  }
 }

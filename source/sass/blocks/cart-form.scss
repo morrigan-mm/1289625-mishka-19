@@ -1,4 +1,6 @@
 .cart-form__content {
+  margin: 0;
+  padding: 0;
   border: none;
 }
 
@@ -10,16 +12,53 @@
 
 .cart-form__list {
   @include list-reset;
+
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin: 30px 0 24px -7px;
+}
+
+.cart-form__item {
+  flex-grow: 1;
+  min-width: calc(100% / 3 - 7px);
+  margin: 0 0 7px 7px;
 }
 
 .cart-form__input {
   @include visually-hidden;
+
+  &:checked ~ .cart-form__label {
+    border-color: $seafoam-blue;
+  }
 }
 
 .cart-form__label {
-  padding: 20px;
+  display: block;
+  padding: 20px 0;
   font-size: 1.7rem;
   font-weight: $font-weight-bold;
   line-height: 0.94;
   border: 2px solid $white-three;
+  cursor: pointer;
+
+  &:hover,
+  &:focus {
+    border-color: transparentize($grey, 0.7);
+  }
+}
+
+.cart-form__button {
+  width: 100%;
+}
+
+@media (min-width: $tablet-width) {
+  .cart-form__title {
+    font-size: 1.7rem;
+    line-height: 1.76;
+  }
+
+  .cart-form__list {
+    width: 350px;
+  }
 }

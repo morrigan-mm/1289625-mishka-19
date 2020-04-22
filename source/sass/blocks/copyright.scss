@@ -1,7 +1,13 @@
 .copyright__link {
   @include link-stylize($title-color);
 
+  display: inline-flex;
+  align-items: center;
   font-size: 1.9rem;
   font-weight: $font-weight-bold;
   line-height: 0.95;
+}
+
+.copyright__icon {
+  margin-left: 30px;
 }
