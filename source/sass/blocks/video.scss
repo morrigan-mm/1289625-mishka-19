@@ -90,6 +90,8 @@ $video-shadow-active: 0 3px 5px 0 transparentize($black, 0.9);
 
 @media (min-width: $desktop-width) {
   .video__container {
+    display: flex;
+    flex-wrap: wrap;
     min-height: 455px;
     margin-top: 0;
     margin-left: 682px;

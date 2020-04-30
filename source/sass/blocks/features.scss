@@ -1,10 +1,12 @@
 .features {
   @include container;
-  @include container-indent-both;
 }
 
 .features__list {
   @include list-reset;
+
+  display: flex;
+  flex-flow: row wrap;
 }
 
 .features__item {
@@ -14,21 +16,40 @@
   font-weight: $font-weight-bold;
   line-height: 1.18;
   color: $title-color;
+
+  &:nth-child(odd) {
+    order: 1;
+  }
+
+  &:nth-child(even) {
+    order: 2;
+  }
 }
 
 @media (min-width: $tablet-width) {
-  .features__list {
-    columns: 2;
-  }
-
   .features__item {
+    width: 50%;
     padding-right: 35px;
     font-size: 2rem;
     line-height: 1.1;
+
+    &:nth-child(odd),
+    &:nth-child(even) {
+      order: initial;
+    }
   }
 }
 
 @media (min-width: $desktop-width) {
+  .features__container {
+    width: 874px;
+    margin-left: auto;
+  }
+
+  .features__list {
+    width: 80%;
+  }
+
   .features__item {
     padding-right: 50px;
   }

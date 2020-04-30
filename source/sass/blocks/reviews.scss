@@ -1,6 +1,5 @@
 .reviews {
   @include container;
-  @include container-indent;
 }
 
 .reviews__item {
@@ -34,8 +33,11 @@
 
 @media (min-width: $tablet-width) {
   .reviews {
-    position: relative;
     padding-bottom: 50px;
+  }
+
+  .reviews__container {
+    position: relative;
   }
 
   .reviews__text {
@@ -60,6 +62,17 @@
     top: 0;
     right: 0;
     width: 175px;
-    margin: 0 $tablet-padding 0;
+    margin: 0;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .reviews__container {
+    width: 876px;
+    margin-left: auto;
+  }
+
+  .reviews__text {
+    padding-right: 105px;
   }
 }

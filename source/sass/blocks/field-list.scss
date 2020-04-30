@@ -25,11 +25,18 @@
 
   .field-list__item--textfield {
     display: flex;
+    align-items: baseline;
   }
 }
 
 @media (min-width: $desktop-width) {
-  .field-list__item {
-    flex: 1 1 calc(100% / 3);
+  .field-list--checkbox .field-list__item {
+    display: flex;
+    width: 241px;
+
+    &:nth-child(3n) {
+      justify-content: flex-end;
+      margin-right: 0;
+    }
   }
 }

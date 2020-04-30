@@ -1,11 +1,17 @@
 .filters {
   @include container;
-  @include container-indent-both;
 }
 
 @media (min-width: $tablet-width) {
   .filters__text {
     font-size: 1.7rem;
     line-height: 1.76;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .filters__container {
+    width: 724px;
+    margin: 0 auto;
   }
 }

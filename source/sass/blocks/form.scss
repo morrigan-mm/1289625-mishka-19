@@ -73,10 +73,15 @@
     &::before {
       display: none;
     }
-  }
 
-  .form__group-content--contacts .form__group-title {
-    left: -164px;
+    &--contacts,
+    &--textarea {
+      top: 17px;
+    }
+
+    &--contacts {
+      left: -164px;
+    }
   }
 
   .form__footer {
@@ -97,7 +102,12 @@
 
 @media (min-width: $desktop-width) {
   .form__group {
+    padding-right: 30px;
     padding-left: 0;
+
+    &:nth-of-type(2) {
+      padding-right: 0;
+    }
   }
 
   .form__group-title {
@@ -106,5 +116,18 @@
 
   .form__group-content--contacts .form__group-title {
     left: -108px;
+  }
+
+  .form__footer {
+    padding-right: 30px;
+  }
+
+  .form__footnote {
+    width: 50%;
+    text-align: right;
+  }
+
+  .form__submit {
+    align-self: center;
   }
 }

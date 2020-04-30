@@ -36,6 +36,8 @@
 
 @media (min-width: $tablet-width) {
   .category-links {
+    @include container;
+
     flex-direction: row;
   }
 

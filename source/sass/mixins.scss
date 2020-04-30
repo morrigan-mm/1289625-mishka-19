@@ -50,16 +50,3 @@
     width: $desktop-width;
   }
 }
-
-@mixin container-indent {
-  @media (min-width: $desktop-width) {
-    padding-left: $padding-indent-desktop;
-  }
-}
-
-@mixin container-indent-both {
-  @media (min-width: $desktop-width) {
-    padding-left: $padding-indent-desktop;
-    padding-right: $padding-indent-desktop;
-  }
-}

@@ -9,43 +9,45 @@
 </head>
 
 <body>
-  <header class="page-header">
-    <div class="page-header__container">
-      <nav class="page-header__nav">
-        <a class="page-header__nav-item page-header__logo" href="index.html">
+  <header class="page-header page-header--inner-page">
+    <nav class="page-header__nav">
+      <div class="page-header__logo">
+        <a class="page-header__link" href="index.html">
           <img class="page-header__logo-image" src="https://via.placeholder.com/86x35" width="86" height="35"
             alt="Логотип магазина «Мишка»">
         </a>
-        <ul class="page-header__nav-item site-navigation">
-          <li class="site-navigation__item">
-            <a class="site-navigation__link" href="catalog.html">Каталог товаров</a>
-          </li>
-          <li class="site-navigation__item">
-            <a class="site-navigation__link" href="form.html">Вязание на заказ</a>
-          </li>
-          <li class="site-navigation__item site-navigation__item--below">
-            <a class="site-navigation__link" href="#">Новые поступления</a>
-          </li>
-          <li class="site-navigation__item site-navigation__item--below">
-            <a class="site-navigation__link" href="#">Распродажа</a>
-          </li>
-        </ul>
-        <ul class="page-header__nav-item user-navigation">
-          <li class="user-navigation__item">
-            <a class="user-navigation__link user-navigation__link--search" href="#">Поиск по сайту</a>
-          </li>
-          <li class="user-navigation__item">
-            <a class="user-navigation__link user-navigation__link--cart" href="#">
-              Корзина:&nbsp;<span>пока пуста</span>
-            </a>
-          </li>
-          <li class="user-navigation__item">
-            <p class="user-navigation__text">Бесплатная доставка по России</p>
-          </li>
-        </ul>
-      </nav>
-      <button class="page-header__toggle page-header__toggle--active" type="button">Открыть меню</button>
-    </div>
+      </div>
+      <ul class="page-header__primary">
+        <li class="page-header__item">
+          <a class="page-header__link" href="catalog.html">Каталог товаров</a>
+        </li>
+        <li class="page-header__item">
+          <a class="page-header__link" href="form.html">Вязание на заказ</a>
+        </li>
+      </ul>
+      <ul class="page-header__secondary">
+        <li class="page-header__item">
+          <a class="page-header__link page-header__link--search" href="#">Поиск по сайту</a>
+        </li>
+        <li class="page-header__item">
+          <a class="page-header__link page-header__link--cart" href="#">
+            Корзина:&nbsp;<span>пока пуста</span>
+          </a>
+        </li>
+      </ul>
+      <ul class="page-header__third">
+        <li class="page-header__item">
+          <a class="page-header__link" href="#">Новые поступления</a>
+        </li>
+        <li class="page-header__item">
+          <a class="page-header__link" href="#">Распродажа</a>
+        </li>
+        <li class="page-header__item page-header__text">
+          Бесплатная доставка по России
+        </li>
+      </ul>
+    </nav>
+    <button class="page-header__toggle page-header__toggle--active" type="button">Открыть меню</button>
   </header>
 
   <main class="page-main">

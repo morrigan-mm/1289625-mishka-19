@@ -1,10 +1,8 @@
 .promo {
   @include container;
-  @include container-indent;
 }
 
 .promo__type {
-  margin-top: -15px;
   font-size: 1.7rem;
   font-weight: $font-weight-bold;
   line-height: 1.18;
@@ -49,7 +47,7 @@
 }
 
 @media (min-width: $tablet-width) {
-  .promo {
+  .promo__container {
     display: flex;
     flex-wrap: wrap;
   }
@@ -68,27 +66,30 @@
     line-height: 1.76;
   }
 
-  .promo__text-wrapper,
-  .promo__image-wrapper,
-  .promo__footer {
-    width: 50%;
+  .promo__info {
+    margin-top: 54px;
   }
 
-  .promo__text-wrapper {
+  .promo__content {
+    position: relative;
     display: flex;
     flex-wrap: wrap;
-    padding-right: $tablet-padding;
-    padding-bottom: 118px;
+    width: 50%;
+    min-height: 404px;
+    padding-right: 53px;
   }
 
   .promo__image-wrapper {
+    position: absolute;
+    bottom: 0;
+    left: 100%;
     width: 333px;
     height: 404px;
   }
 
   .promo__footer {
-    margin-top: -118px;
-    padding-right: $tablet-padding;
+    width: 100%;
+    margin-top: auto;
   }
 
   .promo__price {
@@ -98,19 +99,34 @@
 }
 
 @media (min-width: $desktop-width) {
-  .promo__type {
-    order: -1;
-    margin: 0 50px 0 -150px;
+  .promo__container {
+    position: relative;
+    width: 874px;
+    min-height: 636px;
+    margin-left: auto;
   }
 
-  .promo__text-wrapper,
-  .promo__footer {
+  .promo__type {
+    position: absolute;
+    top: 50px;
+    left: -128px;
+    word-break: break-word;
+  }
+
+  .promo__info {
+    margin-top: 66px;
+  }
+
+  .promo__content {
+    position: static;
     width: 40%;
+    padding-right: 58px;
   }
 
   .promo__image-wrapper {
+    left: auto;
+    right: 0;
     width: 525px;
     height: 636px;
-    margin-top: -95px;
   }
 }
