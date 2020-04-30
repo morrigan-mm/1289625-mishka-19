@@ -1,3 +1,55 @@
 .page-footer {
   background-color: $white-two;
 }
+
+.page-footer__container {
+  @include container;
+}
+
+.page-footer__item {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  min-height: 80px;
+}
+
+.page-footer__copyright {
+  border-top: 1px solid #e5e5e5;
+}
+
+.page-footer__logo {
+  display: none;
+  line-height: 0;
+}
+
+@media (min-width: $tablet-width) {
+  .page-footer__container {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    min-height: 143px;
+  }
+
+  .page-footer__item {
+    flex: 1 1 0;
+    min-width: (100% / 3);
+
+    &:nth-child(3n),
+    &:last-child {
+      justify-content: flex-end;
+    }
+
+    &:nth-child(3n + 1) {
+      justify-content: flex-start;
+    }
+  }
+
+  .page-footer__logo {
+    display: flex;
+  }
+
+  .page-footer__copyright {
+    border-top: none;
+  }
+}

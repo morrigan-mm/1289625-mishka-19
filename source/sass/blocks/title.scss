@@ -1,16 +1,63 @@
 .title {
+  position: relative;
   font-size: 2.5rem;
   font-weight: $font-weight-bold;
   line-height: 1.2;
   text-align: left;
   color: $title-color;
+  z-index: 1;
 
   &--secondary {
+    margin: 20px 0;
     font-size: 1.8rem;
     line-height: 1.67;
   }
 
   &--hidden {
     @include visually-hidden;
+  }
+
+  &--iconed {
+    &::after {
+      position: absolute;
+      top: 50%;
+      right: 0;
+      width: 47px;
+      height: 81px;
+      margin-left: auto;
+      background: url("https://via.placeholder.com/47x81") no-repeat top center;
+      transform: translateY(-50%);
+    }
+  }
+}
+
+@media (min-width: $tablet-width) {
+  .title {
+    width: 70%;
+    font-size: 4.3rem;
+    line-height: 1.16;
+
+    &--iconed {
+      width: 100%;
+      padding-right: 50px;
+
+      &::after {
+        content: "";
+      }
+    }
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .title {
+    font-size: 5.3rem;
+    line-height: 1.08;
+
+    &--iconed {
+      &::after {
+        right: auto;
+        left: -111px;
+      }
+    }
   }
 }

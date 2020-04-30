@@ -1,9 +1,361 @@
-.page-header {
+@mixin ph-background-bordered {
   background-color: $white;
-  box-shadow: $box-shadow;
+  border-bottom: 1px solid $white-three;
+}
+
+@mixin ph-filler-common {
+  content: "";
+  position: absolute;
+  top: 0;
+  width: 100vw;
+  height: 100%;
+  box-sizing: content-box;
+}
+
+@mixin ph-filler-left {
+  &::before {
+    @include ph-background-bordered;
+    @include ph-filler-common;
+
+    right: 100%;
+  }
+}
+
+@mixin ph-filler-right {
+  &::after {
+    @include ph-background-bordered;
+    @include ph-filler-common;
+
+    left: 100%;
+  }
+}
+
+.page-header {
+  position: relative;
+  padding-bottom: 20px;
+  background-color: #f9f9f9;
+  overflow: hidden;
+
+  &--inner-page {
+    background-color: $white-two;
+  }
+}
+
+.page-header__nav {
+  @include container;
+
+  display: flex;
+  flex-direction: column;
 }
 
 .page-header__logo {
-  display: inline-block;
+  @include ph-background-bordered;
+  @include ph-filler-left;
+  @include ph-filler-right;
+
+  position: relative;
+  display: flex;
+}
+
+.page-header__link {
+  @include link-stylize();
+
+  display: inline-flex;
+  align-items: center;
+  font-size: 1.7rem;
+  font-weight: $font-weight-bold;
+  line-height: 1.41;
+  color: $title-color;
+
+  &:hover,
+  &:focus {
+    color: transparentize($title-color, 0.4);
+  }
+
+  &:active {
+    color: transparentize($title-color, 0.7);
+  }
+}
+
+.page-header__primary .page-header__link,
+.page-header__secondary .page-header__link {
+  margin-left: 45px;
+
+  &--search,
+  &--cart {
+    margin-left: 0;
+
+    &::before {
+      content: "";
+      display: block;
+      width: 21px;
+      height: 18px;
+      margin-right: 24px;
+      background: no-repeat center left;
+    }
+  }
+
+  &--search::before {
+    width: 18px;
+    background-image: url("https://via.placeholder.com/18x18");
+  }
+
+  &--cart::before {
+    background-image: url("https://via.placeholder.com/21x18");
+  }
+}
+
+.page-header__logo .page-header__link {
+  margin: 22px auto;
+  line-height: 0;
+}
+
+.page-header__primary,
+.page-header__secondary,
+.page-header__third {
+  @include list-reset;
+}
+
+.page-header__third .page-header__item {
+  display: none;
+}
+
+.page-header__third .page-header__link {
+  font-size: 1.5rem;
+  line-height: 24px;
+}
+
+.page-header__item {
+  @include ph-background-bordered;
+  @include ph-filler-left;
+  @include ph-filler-right;
+
+  position: relative;
+  display: flex;
+  padding: 32px 0;
+}
+
+.page-header__text {
+  align-items: flex-end;
+  margin: 0;
+  font-size: 1.5rem;
+  line-height: 24px;
+  color: $grey;
+}
+
+.page-header__toggle {
+  position: absolute;
+  top: 29px;
+  right: $mobile-padding;
+  display: flex;
+  align-items: center;
+  width: 20px;
+  height: 20px;
+  padding: 0;
   font-size: 0;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  outline-offset: 5px;
+
+  &::after,
+  &::before {
+    position: absolute;
+    left: 0;
+    content: "";
+    width: 100%;
+    height: 2px;
+    background-color: $black;
+  }
+
+  &::after {
+    box-shadow: 0 6px 0 0 $black, 0 -6px 0 0 $black;
+  }
+
+  &--active::after {
+    width: 110%;
+    box-shadow: none;
+    transform: rotate(45deg);
+  }
+
+  &--active::before {
+    width: 110%;
+    transform: rotate(-45deg);
+  }
+}
+
+@media (min-width: $tablet-width) {
+  .page-header__nav {
+    flex-flow: row wrap;
+  }
+
+  .page-header__toggle {
+    display: none;
+  }
+
+  .page-header__logo {
+    order: 1;
+
+    &::after {
+      content: none;
+    }
+  }
+
+  .page-header__primary,
+  .page-header__secondary {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .page-header__primary {
+    width: 60%;
+    order: 3;
+  }
+
+  .page-header__primary .page-header__item {
+    padding: 0;
+    margin-top: 25px;
+    background-color: transparent;
+    border: none;
+
+    &::before,
+    &::after {
+      content: none;
+    }
+  }
+
+  .page-header__primary .page-header__link {
+    margin-left: 0;
+    margin-right: 37px;
+    font-size: 1.5rem;
+    line-height: 24px;
+  }
+
+  .page-header__secondary {
+    @include ph-background-bordered;
+    @include ph-filler-right;
+
+    position: relative;
+    order: 2;
+    flex-grow: 1;
+    justify-content: flex-end;
+    width: 50%;
+    background-color: $white;
+  }
+
+  .page-header__secondary .page-header__item {
+    border-left: 1px solid $white-three;
+    border-bottom: none;
+
+    &::before,
+    &::after {
+      content: none;
+    }
+  }
+
+  .page-header__secondary .page-header__link {
+    &--cart::before,
+    &--search::before {
+      margin: 0 32px;
+    }
+  }
+
+  .page-header__link--search {
+    font-size: 0;
+  }
+
+  .page-header__third {
+    order: 4;
+    display: flex;
+    flex-wrap: wrap;
+    width: 40%;
+    margin-left: auto;
+  }
+
+  .page-header__third .page-header__text {
+    display: inline-flex;
+    margin-left: auto;
+    padding: 0;
+    background: transparent;
+    border-bottom: none;
+
+    &::before,
+    &::after {
+      content: none;
+    }
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .page-header__nav {
+    justify-content: space-between;
+  }
+
+  .page-header__logo {
+    @include ph-filler-right;
+
+    order: 2;
+  }
+
+  .page-header__primary,
+  .page-header__secondary {
+    flex-grow: 0;
+    width: 450px;
+  }
+
+  .page-header__primary {
+    order: 1;
+  }
+
+  .page-header__item {
+    background: transparent;
+    border-bottom: none;
+  }
+
+  .page-header__primary .page-header__item {
+    margin-top: 0;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    padding-left: 35px;
+    border-left: 1px solid $white-three;
+
+    &:nth-child(odd) {
+      width: 184px;
+      padding-left: 0;
+      border: none;
+    }
+  }
+
+  .page-header__primary .page-header__link {
+    margin-right: 15px;
+    font-size: 1.7rem;
+    line-height: 1.41;
+  }
+
+  .page-header__secondary {
+    order: 3;
+  }
+
+  .page-header__third {
+    width: 100%;
+  }
+
+  .page-header__third .page-header__item {
+    display: flex;
+    margin-top: 25px;
+    padding: 0;
+
+    &:not(.page-header__text) {
+      margin-left: 60px;
+    }
+
+    &:first-child {
+      margin-left: 0;
+    }
+
+    &::before,
+    &::after {
+      content: none;
+    }
+  }
 }

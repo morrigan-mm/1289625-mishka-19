@@ -1,8 +1,14 @@
+.card {
+  line-height: 0;
+}
+
 .card__image-wrapper {
+  display: flex;
   background-color: #cccccc;
 }
 
 .card__content {
+  padding: 27px;
   border: 1px solid $white-three;
 
   &:hover,
@@ -16,6 +22,7 @@
 }
 
 .card__title {
+  margin: 0;
   font-size: 1.7rem;
   font-weight: $font-weight-bold;
   line-height: 1.41;
@@ -36,7 +43,15 @@
 }
 
 .card__description {
+  font-size: 1.3rem;
   line-height: 2.31;
+}
+
+.card__footer {
+  display: flex;
+  justify-content: space-between;
+  padding-top: 20px;
+  box-shadow: 0 -1px 0 0 $white-three;
 }
 
 .card__price {
@@ -44,4 +59,66 @@
   font-weight: $font-weight-bold;
   line-height: 1.6;
   color: $black;
+}
+
+@media (min-width: $tablet-width) {
+  .card {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    min-height: 334px;
+  }
+
+  .card__image-wrapper,
+  .card__content {
+    width: 50%;
+  }
+
+  .card__content {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .card__title {
+    font-size: 2rem;
+    line-height: 1.2;
+  }
+
+  .card__description {
+    font-size: 1.5rem;
+    line-height: 2;
+  }
+
+  .card__footer {
+    margin-top: auto;
+  }
+
+  .card__price {
+    font-size: 1.7rem;
+    line-height: 1.41;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .card {
+    flex-flow: column nowrap;
+  }
+
+  .card__image-wrapper,
+  .card__content {
+    width: 100%;
+  }
+
+  .card__image-wrapper {
+    height: 462px;
+  }
+
+  .card__content {
+    flex-grow: 1;
+    min-height: 197px;
+  }
+
+  .card__description {
+    margin: 0;
+  }
 }

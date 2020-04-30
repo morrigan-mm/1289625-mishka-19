@@ -5,3 +5,38 @@
 .field-list__item {
   padding-top: 20px;
 }
+
+@media (min-width: $tablet-width) {
+  .field-list {
+    display: flex;
+    flex-wrap: wrap;
+
+    &--radio,
+    &--textfield {
+      flex-direction: column;
+    }
+
+    &--checkbox {
+      .field-list__item {
+        width: 50%;
+      }
+    }
+  }
+
+  .field-list__item--textfield {
+    display: flex;
+    align-items: baseline;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .field-list--checkbox .field-list__item {
+    display: flex;
+    width: 241px;
+
+    &:nth-child(3n) {
+      justify-content: flex-end;
+      margin-right: 0;
+    }
+  }
+}

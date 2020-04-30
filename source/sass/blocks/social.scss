@@ -1,5 +1,8 @@
 .social {
   @include list-reset;
+
+  display: flex;
+  justify-content: space-between;
 }
 
 .social__link {

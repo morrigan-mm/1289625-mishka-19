@@ -1,7 +1,13 @@
+.category-links {
+  display: flex;
+  flex-flow: column wrap;
+}
+
 .category-links__item {
   @include link-stylize($white);
 
-  padding: 30px 29px;
+  min-height: 103px;
+  padding: 28px 30px;
   font-size: 1.9rem;
   font-weight: $font-weight-bold;
   line-height: 1.26;
@@ -25,5 +31,24 @@
     &:active {
       background-color: $emerald-blue;
     }
+  }
+}
+
+@media (min-width: $tablet-width) {
+  .category-links {
+    @include container;
+
+    flex-direction: row;
+  }
+
+  .category-links__item {
+    width: 50%;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .category-links__item {
+    font-size: 2rem;
+    line-height: 1.2;
   }
 }
