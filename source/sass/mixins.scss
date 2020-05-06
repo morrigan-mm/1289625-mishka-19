@@ -50,3 +50,11 @@
     width: $desktop-width;
   }
 }
+
+@mixin ie11-fix {
+  &::after {
+    content: "";
+    min-height: inherit;
+    font-size: 0;
+  }
+}

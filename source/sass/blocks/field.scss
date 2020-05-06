@@ -94,6 +94,7 @@
     font-family: inherit;
     border: 2px solid $black;
     resize: none;
+    overflow: auto;
 
     &:hover,
     &:focus,
@@ -109,6 +110,17 @@
   &:checked ~ .field__label::after {
     visibility: visible;
   }
+}
+
+.field__input--hidden:focus + .field__label::before {
+  /* stylelint-disable declaration-block-no-duplicate-properties */
+  outline: 1px dotted; // for IE11
+  outline: 2px auto #4d90fe; //for all browsers but Mozilla
+  /* stylelint-enable declaration-block-no-duplicate-properties */
+}
+
+.field__input--hidden:-moz-focusring + .field__label::before {
+  outline: 1px dotted;
 }
 
 @media (min-width: $tablet-width) {
