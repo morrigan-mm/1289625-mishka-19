@@ -4,12 +4,9 @@
 
 .page-footer__container {
   @include container;
-  @include ie11-fix;
 }
 
 .page-footer__item {
-  @include ie11-fix;
-
   display: flex;
   flex-wrap: wrap;
   align-items: center;

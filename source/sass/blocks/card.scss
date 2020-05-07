@@ -23,7 +23,7 @@
 
 .card__title {
   margin: 0;
-  font-size: 1.7rem;
+  font-size: 17px;
   font-weight: $font-weight-bold;
   line-height: 1.41;
   color: $title-color;
@@ -43,7 +43,7 @@
 }
 
 .card__description {
-  font-size: 1.3rem;
+  font-size: 13px;
   line-height: 2.31;
 }
 
@@ -55,7 +55,7 @@
 }
 
 .card__price {
-  font-size: 1.5rem;
+  font-size: 15px;
   font-weight: $font-weight-bold;
   line-height: 1.6;
   color: $black;
@@ -80,12 +80,12 @@
   }
 
   .card__title {
-    font-size: 2rem;
+    font-size: 20px;
     line-height: 1.2;
   }
 
   .card__description {
-    font-size: 1.5rem;
+    font-size: 15px;
     line-height: 2;
   }
 
@@ -94,7 +94,7 @@
   }
 
   .card__price {
-    font-size: 1.7rem;
+    font-size: 17px;
     line-height: 1.41;
   }
 }

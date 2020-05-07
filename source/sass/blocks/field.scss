@@ -1,7 +1,7 @@
 .field__label {
   position: relative;
   display: block;
-  font-size: 1.7rem;
+  font-size: 17px;
   font-weight: $font-weight-bold;
   line-height: 1.06;
   color: $title-color;
@@ -22,17 +22,6 @@
       border: 2px solid $grey;
     }
 
-    &:hover::before,
-    &:focus::before {
-      border-color: #62d1ba;
-    }
-
-    &:active::before,
-    &:active::before {
-      border-color: transparentize($grey, 0.7);
-    }
-
-    &::after,
     &::after {
       position: absolute;
       content: "";
@@ -71,7 +60,7 @@
 .field__input {
   width: 100%;
   min-height: 52px;
-  font-size: 1.7rem;
+  font-size: 17px;
   line-height: 1.06;
   color: $text-color;
   background-color: inherit;
@@ -112,22 +101,35 @@
   }
 }
 
+.field__input--hidden:hover + .field__label::before,
 .field__input--hidden:focus + .field__label::before {
-  /* stylelint-disable declaration-block-no-duplicate-properties */
-  outline: 1px dotted; // for IE11
-  outline: 2px auto #4d90fe; //for all browsers but Mozilla
-  /* stylelint-enable declaration-block-no-duplicate-properties */
+  border-color: #62d1ba;
 }
 
-.field__input--hidden:-moz-focusring + .field__label::before {
-  outline: 1px dotted;
+.field__input--hidden:active + .field__label::before {
+  border-color: transparentize($grey, 0.7);
 }
 
 @media (min-width: $tablet-width) {
+  .field {
+    &--phone,
+    &--email,
+    &--textbox {
+      width: 502px;
+      margin-left: auto;
+    }
+  }
+
   .field__input,
   .field__label {
-    font-size: 1.9rem;
+    font-size: 19px;
     line-height: 0.95;
+  }
+
+  .field__input--textbox {
+    display: flex;
+    //width: 502px;
+    //margin-left: auto;
   }
 
   .field__label {
@@ -170,6 +172,18 @@
         width: 30px;
         height: 17px;
       }
+    }
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .field {
+    &--phone,
+    &--email,
+    &--textbox {
+      @include content-position-inner;
+
+      padding-right: 24px;
     }
   }
 }

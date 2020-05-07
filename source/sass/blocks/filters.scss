@@ -1,17 +1,16 @@
-.filters {
+.filters__intro {
   @include container;
 }
 
 @media (min-width: $tablet-width) {
   .filters__text {
-    font-size: 1.7rem;
+    font-size: 17px;
     line-height: 1.76;
   }
 }
 
 @media (min-width: $desktop-width) {
-  .filters__container {
-    width: 724px;
-    margin: 0 auto;
+  .filters__text {
+    @include content-position-inner;
   }
 }

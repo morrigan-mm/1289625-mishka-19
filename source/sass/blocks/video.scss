@@ -14,7 +14,7 @@ $video-shadow-active: 0 3px 5px 0 transparentize($black, 0.9);
 .video__title {
   padding-left: 91px;
   padding-right: 30px;
-  font-size: 1.7rem;
+  font-size: 17px;
   font-weight: $font-weight-bold;
   line-height: 1.41;
   color: $title-color;
@@ -67,7 +67,7 @@ $video-shadow-active: 0 3px 5px 0 transparentize($black, 0.9);
 
   .video__title {
     padding-left: 65px;
-    font-size: 2rem;
+    font-size: 20px;
     line-height: 1.2;
   }
 
@@ -83,7 +83,7 @@ $video-shadow-active: 0 3px 5px 0 transparentize($black, 0.9);
   }
 
   .video__text {
-    font-size: 1.5rem;
+    font-size: 15px;
     line-height: 2;
   }
 }
