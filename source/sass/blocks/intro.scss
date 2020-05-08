@@ -18,7 +18,7 @@
   @include container;
 
   margin-bottom: auto;
-  font-size: 2.7rem;
+  font-size: 27px;
   font-weight: $font-weight-bold;
   line-height: 1.11;
   text-align: center;
@@ -34,14 +34,14 @@
   }
 
   .intro__title {
-    font-size: 4.3rem;
+    font-size: 43px;
     line-height: 1.16;
   }
 }
 
 @media (min-width: $desktop-width) {
   .intro__title {
-    font-size: 5.3rem;
+    font-size: 53px;
     line-height: 1.08;
   }
 }

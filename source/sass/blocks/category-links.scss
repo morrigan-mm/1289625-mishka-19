@@ -8,7 +8,7 @@
 
   min-height: 103px;
   padding: 28px 30px;
-  font-size: 1.9rem;
+  font-size: 19px;
   font-weight: $font-weight-bold;
   line-height: 1.26;
   background-color: $seafoam-blue;
@@ -48,7 +48,7 @@
 
 @media (min-width: $desktop-width) {
   .category-links__item {
-    font-size: 2rem;
+    font-size: 20px;
     line-height: 1.2;
   }
 }

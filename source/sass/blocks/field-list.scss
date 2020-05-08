@@ -10,6 +10,8 @@
   .field-list {
     display: flex;
     flex-wrap: wrap;
+    width: 502px;
+    margin-left: auto;
 
     &--radio,
     &--textfield {
@@ -30,6 +32,16 @@
 }
 
 @media (min-width: $desktop-width) {
+  .field-list {
+    @include content-position-inner;
+
+    padding-right: 24px;
+
+    &--checkbox {
+      padding-right: 0;
+    }
+  }
+
   .field-list--checkbox .field-list__item {
     display: flex;
     width: 241px;

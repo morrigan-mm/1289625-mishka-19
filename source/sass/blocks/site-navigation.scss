@@ -2,7 +2,7 @@
   @include list-reset;
 
   background-color: $white;
-  font-size: 1.7rem;
+  font-size: 17px;
   font-weight: $font-weight-bold;
   text-align: left;
 }
@@ -38,7 +38,7 @@
 @media (min-width: $tablet-width) {
   .site-navigation {
     background-color: transparent;
-    font-size: 1.5rem;
+    font-size: 15px;
     line-height: 1.6;
   }
 

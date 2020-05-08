@@ -50,3 +50,41 @@
     width: $desktop-width;
   }
 }
+
+@mixin ph-background-bordered {
+  background-color: $white;
+  border-bottom: 1px solid $white-three;
+}
+
+@mixin ph-filler-common {
+  content: "";
+  position: absolute;
+  top: 0;
+  width: 100vw;
+  height: 100%;
+  box-sizing: content-box;
+}
+
+@mixin ph-filler-left {
+  &::before {
+    @include ph-background-bordered;
+    @include ph-filler-common;
+
+    right: 100%;
+  }
+}
+
+@mixin ph-filler-right {
+  &::after {
+    @include ph-background-bordered;
+    @include ph-filler-common;
+
+    left: 100%;
+  }
+}
+
+@mixin content-position-inner {
+  width: 724px;
+  margin-left: auto;
+  margin-right: auto;
+}

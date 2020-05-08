@@ -1,6 +1,6 @@
 .title {
   position: relative;
-  font-size: 2.5rem;
+  font-size: 25px;
   font-weight: $font-weight-bold;
   line-height: 1.2;
   text-align: left;
@@ -9,7 +9,7 @@
 
   &--secondary {
     margin: 20px 0;
-    font-size: 1.8rem;
+    font-size: 18px;
     line-height: 1.67;
   }
 
@@ -34,7 +34,7 @@
 @media (min-width: $tablet-width) {
   .title {
     width: 70%;
-    font-size: 4.3rem;
+    font-size: 43px;
     line-height: 1.16;
 
     &--iconed {
@@ -50,7 +50,7 @@
 
 @media (min-width: $desktop-width) {
   .title {
-    font-size: 5.3rem;
+    font-size: 53px;
     line-height: 1.08;
 
     &--iconed {
