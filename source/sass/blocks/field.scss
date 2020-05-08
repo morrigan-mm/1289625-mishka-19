@@ -63,7 +63,7 @@
   font-size: 17px;
   line-height: 1.06;
   color: $text-color;
-  background-color: inherit;
+  background-color: transparent;
   border: none;
   border-bottom: 2px solid $black;
 
@@ -128,8 +128,6 @@
 
   .field__input--textbox {
     display: flex;
-    //width: 502px;
-    //margin-left: auto;
   }
 
   .field__label {
