@@ -25,5 +25,11 @@ $mobile-padding: 30px;
 $tablet-padding: 50px;
 $desktop-padding: 50px;
 
+$video-shadow-hover: 0 6px 10px 0 transparentize($black, 0.9);
+$video-shadow-active: 0 3px 5px 0 transparentize($black, 0.9);
+
+$retina-dpi: 144dpi;
+$retina-dppx: 1.5dppx;
+
 $text-color: $grey;
 $title-color: $black;

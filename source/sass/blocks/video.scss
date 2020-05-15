@@ -1,9 +1,7 @@
-$video-shadow-hover: 0 6px 10px 0 transparentize($black, 0.9);
-$video-shadow-active: 0 3px 5px 0 transparentize($black, 0.9);
-
 .video {
   @include container;
-  margin-bottom: 50px;
+  margin-bottom: 56px;
+  padding-top: 5px;
 }
 
 .video__card {
@@ -12,12 +10,25 @@ $video-shadow-active: 0 3px 5px 0 transparentize($black, 0.9);
 }
 
 .video__title {
+  position: relative;
+  margin-top: 23px;
+  margin-bottom: 26px;
   padding-left: 91px;
   padding-right: 30px;
   font-size: 17px;
   font-weight: $font-weight-bold;
   line-height: 1.41;
   color: $title-color;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 5px;
+    left: 30px;
+    width: 35px;
+    height: 35px;
+    background: url("../img/icon-video.svg") no-repeat center;
+  }
 }
 
 .video__content {
@@ -25,8 +36,14 @@ $video-shadow-active: 0 3px 5px 0 transparentize($black, 0.9);
   background-color: $white-three;
 }
 
+.video__text {
+  margin-top: 0;
+  margin-bottom: 25px;
+}
+
 .video__description {
   padding: 34px;
+  padding-top: 26px;
   border-top: 1px solid $white-three;
 
   &:hover,
@@ -44,8 +61,14 @@ $video-shadow-active: 0 3px 5px 0 transparentize($black, 0.9);
 }
 
 @media (min-width: $tablet-width) {
+  .video {
+    padding-top: 25px;
+    margin-bottom: 60px;
+  }
+
   .video__container {
     margin-top: 455px;
+    padding-top: 16px;
 
     &:hover,
     &:focus {
@@ -66,13 +89,18 @@ $video-shadow-active: 0 3px 5px 0 transparentize($black, 0.9);
   }
 
   .video__title {
-    padding-left: 65px;
+    padding-left: 106px;
     font-size: 20px;
     line-height: 1.2;
+
+    &::before {
+      top: -8px;
+      left: 40px;
+    }
   }
 
   .video__description {
-    padding: 60px 40px 40px;
+    padding: 5px 40px 46px;
     border-top: none;
 
     &:hover,
@@ -83,23 +111,35 @@ $video-shadow-active: 0 3px 5px 0 transparentize($black, 0.9);
   }
 
   .video__text {
+    margin-bottom: 35px;
     font-size: 15px;
     line-height: 2;
   }
 }
 
 @media (min-width: $desktop-width) {
+  .video {
+    padding-top: 5px;
+    margin-bottom: 100px;
+  }
+
   .video__container {
     display: flex;
-    flex-wrap: wrap;
+    flex-flow: column wrap;
     min-height: 455px;
     margin-top: 0;
     margin-left: 682px;
+    padding-top: 0;
   }
 
   .video__title {
-    padding-top: 60px;
-    padding-left: 80px;
+    padding: 72px 20% 0 78px;
+    margin-bottom: 33px;
+
+    &::before {
+      top: 16px;
+      left: 76px;
+    }
   }
 
   .video__content {
@@ -108,6 +148,10 @@ $video-shadow-active: 0 3px 5px 0 transparentize($black, 0.9);
   }
 
   .video__description {
-    padding: 0 67px 0 80px;
+    padding: 0 56px 60px 80px;
+  }
+
+  .video__text {
+    margin-bottom: 47px;
   }
 }

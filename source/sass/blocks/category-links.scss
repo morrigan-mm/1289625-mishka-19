@@ -6,12 +6,23 @@
 .category-links__item {
   @include link-stylize($white);
 
-  min-height: 103px;
-  padding: 28px 30px;
+  position: relative;
+  padding: 30px 50% 30px 29px;
   font-size: 19px;
   font-weight: $font-weight-bold;
-  line-height: 1.26;
+  line-height: 1.2;
   background-color: $seafoam-blue;
+
+  &::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 27px;
+    width: 60px;
+    height: 100%;
+    opacity: 0.5;
+    background: no-repeat center;
+  }
 
   &:hover,
   &:focus {
@@ -23,8 +34,18 @@
     background-color: #59d5bc;
   }
 
+  &--furniture {
+    &::after {
+      background-image: url("../img/icon-interior.svg");
+    }
+  }
+
   &--toys {
     background-color: $greany-blue;
+
+    &::after {
+      background-image: url("../img/icon-toy.svg");
+    }
 
     &:hover,
     &:focus,
@@ -39,16 +60,20 @@
     @include container;
 
     flex-direction: row;
+    margin-top: auto;
   }
 
   .category-links__item {
     width: 50%;
-  }
-}
-
-@media (min-width: $desktop-width) {
-  .category-links__item {
+    padding-left: 35px;
+    padding-right: 30%;
     font-size: 20px;
-    line-height: 1.2;
+    line-height: 1.5;
+
+    &--toys {
+      &::after {
+        right: 35px;
+      }
+    }
   }
 }

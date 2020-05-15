@@ -10,6 +10,9 @@
   left: 50%;
   width: 101px;
   height: 77px;
+  font-size: 0;
+  background: url("../img/icon-play.svg") no-repeat center;
+  border: none;
   transform: translate(-50%, -50%);
 
   &:hover,

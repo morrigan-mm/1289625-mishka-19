@@ -1,8 +1,14 @@
 .promo {
   @include container;
+  @include grey-wavy;
+
+  position: relative;
+  padding-top: 25px;
+  padding-bottom: 42px;
 }
 
 .promo__type {
+  margin: 5px 0 0;
   font-size: 17px;
   font-weight: $font-weight-bold;
   line-height: 1.18;
@@ -10,19 +16,27 @@
   color: $seafoam-blue;
 }
 
-.promo__text,
-.promo__info {
-  margin: 0;
+.promo__content {
+  padding-top: 23px;
+}
+
+.promo__text-wrapper {
   font-size: 15px;
+}
+
+.promo__text {
+  margin: 0;
+  line-height: 1.6;
 }
 
 .promo__info {
   width: 100%;
-  margin: 10px 0;
+  margin-top: 16px;
+  line-height: 1.33;
 }
 
 .promo__info-row {
-  height: 40px;
+  height: 39px;
   box-shadow: 0 1px 0 0 $white-three;
 }
 
@@ -31,11 +45,13 @@
 }
 
 .promo__image-wrapper {
+  margin-top: 25px;
   line-height: 0;
   background-color: $white-three;
 }
 
 .promo__price {
+  margin: 20px 0;
   font-size: 18px;
   font-weight: $font-weight-bold;
   text-align: center;
@@ -47,6 +63,11 @@
 }
 
 @media (min-width: $tablet-width) {
+  .promo {
+    padding-top: 45px;
+    padding-bottom: 68px;
+  }
+
   .promo__container {
     display: flex;
     flex-wrap: wrap;
@@ -56,9 +77,19 @@
     align-self: center;
     width: 100px;
     margin: 0 0 0 auto;
-    padding: 10px;
+    padding: 10px 20px 10px 0;
     line-height: 1;
     text-align: center;
+  }
+
+  .promo__content {
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    width: 50%;
+    min-height: 458px;
+    padding-right: 44px;
+    padding-top: 46px;
   }
 
   .promo__text {
@@ -67,16 +98,7 @@
   }
 
   .promo__info {
-    margin-top: 54px;
-  }
-
-  .promo__content {
-    position: relative;
-    display: flex;
-    flex-wrap: wrap;
-    width: 50%;
-    min-height: 404px;
-    padding-right: 53px;
+    margin-top: 35px;
   }
 
   .promo__image-wrapper {
@@ -93,33 +115,41 @@
   }
 
   .promo__price {
+    margin-bottom: 33px;
     font-size: 20px;
     line-height: 1.2;
   }
 }
 
 @media (min-width: $desktop-width) {
+  .promo {
+    padding-top: 72px;
+    padding-bottom: 95px;
+  }
+
   .promo__container {
     position: relative;
     width: 874px;
     min-height: 636px;
     margin-left: auto;
+    padding-top: 52px;
   }
 
   .promo__type {
     position: absolute;
-    top: 50px;
-    left: -128px;
+    top: 57px;
+    left: -135px;
     word-break: break-word;
   }
 
   .promo__info {
-    margin-top: 66px;
+    margin-top: 48px;
   }
 
   .promo__content {
     position: static;
     width: 40%;
+    padding-top: 16px;
     padding-right: 58px;
   }
 

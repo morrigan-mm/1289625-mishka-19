@@ -43,6 +43,8 @@
 }
 
 .card__description {
+  margin-top: 5px;
+  margin-bottom: 20px;
   font-size: 13px;
   line-height: 2.31;
 }
@@ -52,6 +54,29 @@
   justify-content: space-between;
   padding-top: 20px;
   box-shadow: 0 -1px 0 0 $white-three;
+}
+
+.card__button {
+  padding: 0;
+  font-size: 0;
+  border: none;
+  cursor: pointer;
+  outline-offset: 5px;
+
+  &:hover .card__button-icon,
+  &:focus .card__button-icon {
+    color: $seafoam-blue;
+    opacity: 1;
+  }
+
+  &:active .card__button-icon {
+    opacity: 0.3;
+  }
+}
+
+.card__button-icon {
+  color: $black;
+  opacity: 0.2;
 }
 
 .card__price {
@@ -96,6 +121,10 @@
   .card__price {
     font-size: 17px;
     line-height: 1.41;
+  }
+
+  .card__button {
+    width: 28px;
   }
 }
 

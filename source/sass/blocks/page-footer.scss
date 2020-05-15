@@ -26,6 +26,8 @@
 }
 
 .page-footer__logo {
+  @include footer-icon-states;
+
   line-height: 0;
 }
 
@@ -56,6 +58,7 @@
     }
 
     &--copyright {
+      padding-top: 7px;
       border-top: none;
     }
   }
