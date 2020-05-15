@@ -1,5 +1,7 @@
 .contacts {
   @include container;
+
+  padding-top: 38px;
 }
 
 .contacts__info {
@@ -7,6 +9,7 @@
 
   display: flex;
   flex-wrap: wrap;
+  margin-top: 25px;
   font-size: 15px;
   line-height: 2;
 }
@@ -14,7 +17,10 @@
 .contacts__info-row {
   display: flex;
   width: 100%;
-  margin-bottom: 20px;
+
+  & + & {
+    margin-top: 30px;
+  }
 }
 
 .contacts__info-title,
@@ -28,15 +34,18 @@
 
 .contacts__map {
   height: 457px;
+  margin-top: 37px;
   line-height: 0;
-  background-color: #dfdfdf;
-}
 
-.contacts__map-image {
-  position: absolute;
-  left: 0;
-  width: 100%;
-  height: 457px;
+  &::before {
+    position: absolute;
+    content: "";
+    left: 0;
+    width: 100%;
+    height: 457px;
+    background: #dfdfdf url("../img/map-desktop@1x.jpg") no-repeat center;
+    background-size: cover;
+  }
 }
 
 .contacts__button {
@@ -45,14 +54,26 @@
 }
 
 @media (min-width: $tablet-width) {
+  .contacts {
+    padding-top: 62px;
+  }
+
   .contacts__info {
-    padding: 50px 0;
+    padding: 24px 0;
     font-size: 17px;
     line-height: 1.76;
   }
 
   .contacts__info-row {
     width: 50%;
+
+    & + & {
+      margin-top: 0;
+    }
+  }
+
+  .contacts__info-title {
+    margin-right: 25px;
   }
 
   .contacts__footer {
@@ -62,27 +83,38 @@
 
   .contacts__button {
     width: 230px;
+    margin-top: 55px;
+    margin-bottom: 55px;
   }
 }
 
 @media (min-width: $desktop-width) {
+  .contacts {
+    padding-top: 33px;
+    padding-bottom: 50px;
+  }
+
   .contacts__container {
     position: relative;
     display: flex;
     flex-wrap: wrap;
     width: 874px;
     min-height: 457px;
-    padding-right: 50%;
     margin-left: auto;
+    padding-top: 107px;
+    padding-right: 50%;
   }
 
   .contacts__info {
     width: 305px;
-    padding-bottom: 0;
   }
 
   .contacts__info-row {
     width: 100%;
+
+    &:not(:last-child) {
+      margin-bottom: 33px;
+    }
   }
 
   .contacts__map {
@@ -95,9 +127,5 @@
 
   .contacts__footer {
     margin-top: auto;
-  }
-
-  .contacts__button {
-    margin-bottom: 0;
   }
 }

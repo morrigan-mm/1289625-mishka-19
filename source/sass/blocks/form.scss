@@ -7,15 +7,18 @@
   padding: 0;
   margin: 0;
   border: none;
-}
 
-.form__group + .form__group,
-.form__group-content + .form__group-content {
-  margin-top: 16px;
+  & + & {
+    margin-top: 28px;
+  }
 }
 
 .form__group-content {
   @include container;
+
+  & + & {
+    margin-top: 32px;
+  }
 }
 
 .form__group-title {
@@ -25,6 +28,7 @@
   display: flex;
   align-items: center;
   max-width: 100%;
+  margin-bottom: 23px;
   font-size: 17px;
   font-weight: $font-weight-bold;
   line-height: 0.94;
@@ -33,6 +37,10 @@
 
   &--contacts {
     padding: 0;
+  }
+
+  &--textfield {
+    margin-bottom: 30px;
   }
 
   &--hidden {
@@ -47,6 +55,10 @@
     height: 1px;
     background-color: $seafoam-blue;
   }
+}
+
+.form__group-content .form__group-title {
+  margin-bottom: 10px;
 }
 
 .form__group-content--contacts .form__group-title::before {
@@ -71,6 +83,7 @@
 
 .form__footnote {
   align-self: center;
+  margin: 17px 0 33px;
   font-size: 14px;
   line-height: 1.14;
 }
@@ -81,6 +94,13 @@
 
 @media (min-width: $tablet-width) {
   .form__group {
+    padding-top: 50px;
+    padding-bottom: 50px;
+
+    & + & {
+      margin-top: 0;
+    }
+
     &--colored {
       background-color: $white-two;
     }
@@ -88,11 +108,15 @@
 
   .form__group-content--contacts {
     position: relative;
+
+    & + & {
+      margin-top: 26px;
+    }
   }
 
   .form__group-title {
     position: absolute;
-    top: 40px;
+    top: 72px;
     left: 50%;
     transform: translateX(-50%);
 
@@ -100,12 +124,12 @@
       display: none;
     }
 
-    &--contacts,
-    &--textarea {
-      top: 17px;
+    &--textfield {
+      top: 67px;
     }
 
     &--contacts {
+      top: 17px;
       left: 50px;
     }
   }
@@ -122,16 +146,17 @@
   .form__footer-content {
     flex-direction: row-reverse;
     justify-content: space-between;
-    padding-top: 50px;
-    padding-bottom: 50px;
+    align-items: flex-start;
   }
 
   .form__footnote {
+    margin-bottom: 15px;
     font-size: 17px;
     line-height: 1.76;
   }
 
   .form__submit {
+    align-self: center;
     width: 230px;
   }
 }
@@ -148,6 +173,8 @@
   }
 
   .form__footnote {
+    margin-top: auto;
+    margin-bottom: auto;
     width: 50%;
     text-align: right;
   }

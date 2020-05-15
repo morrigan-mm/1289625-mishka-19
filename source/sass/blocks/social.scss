@@ -2,9 +2,36 @@
   @include list-reset;
 
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
+  padding: 0 38px;
 }
 
 .social__link {
   @include link-stylize;
+  @include footer-icon-states;
+
+  display: block;
+  font-size: 0;
+}
+
+@media (min-width: $tablet-width) {
+  .social {
+    justify-content: space-between;
+  }
+
+  .social__item {
+    padding-top: 10px;
+    padding-right: 5px;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .social {
+    justify-content: center;
+  }
+
+  .social__item {
+    min-width: 20%;
+    text-align: center;
+  }
 }

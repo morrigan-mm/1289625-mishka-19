@@ -1,5 +1,7 @@
 .features {
   @include container;
+
+  padding-top: 25px;
 }
 
 .features__list {
@@ -7,9 +9,11 @@
 
   display: flex;
   flex-flow: row wrap;
+  padding-top: 23px;
 }
 
 .features__item {
+  position: relative;
   padding-top: 64px;
   padding-bottom: 19px;
   font-size: 17px;
@@ -24,12 +28,68 @@
   &:nth-child(even) {
     order: 2;
   }
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 12px;
+    left: -5px;
+    width: 55px;
+    height: 100%;
+    background: no-repeat top center;
+  }
+
+  &--flower {
+    &::before {
+      background-image: url("../img/icon-feature-flower.svg");
+    }
+  }
+
+  &--thread-ball {
+    &::before {
+      background-image: url("../img/icon-feature-ball.svg");
+    }
+  }
+
+  &--money {
+    &::before {
+      background-image: url("../img/icon-feature-money.svg");
+    }
+  }
+
+  &--rocket {
+    &::before {
+      background-image: url("../img/icon-feature-rocket.svg");
+    }
+  }
+
+  &--heart {
+    &::before {
+      background-image: url("../img/icon-feature-heart.svg");
+    }
+  }
+
+  &--gift {
+    &::before {
+      background-image: url("../img/icon-feature-gift.svg");
+    }
+  }
 }
 
 @media (min-width: $tablet-width) {
+  .features {
+    padding-top: 50px;
+    padding-bottom: 38px;
+  }
+
+  .features__list {
+    padding-top: 40px;
+  }
+
   .features__item {
     width: 50%;
     padding-right: 35px;
+    padding-bottom: 46px;
     font-size: 20px;
     line-height: 1.1;
 
@@ -41,6 +101,11 @@
 }
 
 @media (min-width: $desktop-width) {
+  .features {
+    padding-top: 60px;
+    padding-bottom: 45px;
+  }
+
   .features__container {
     width: 874px;
     margin-left: auto;

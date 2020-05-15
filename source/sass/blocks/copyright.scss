@@ -9,5 +9,7 @@
 }
 
 .copyright__icon {
+  @include footer-icon-states($seafoam-blue);
+
   margin-left: 30px;
 }

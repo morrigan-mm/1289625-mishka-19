@@ -1,5 +1,6 @@
 .title {
   position: relative;
+  margin: 0;
   font-size: 25px;
   font-weight: $font-weight-bold;
   line-height: 1.2;
@@ -8,7 +9,6 @@
   z-index: 1;
 
   &--secondary {
-    margin: 20px 0;
     font-size: 18px;
     line-height: 1.67;
   }
@@ -25,7 +25,7 @@
       width: 47px;
       height: 81px;
       margin-left: auto;
-      background: url("https://via.placeholder.com/47x81") no-repeat top center;
+      background: url("../img/icon-flag.svg") no-repeat top center;
       transform: translateY(-50%);
     }
   }
