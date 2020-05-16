@@ -9,7 +9,7 @@
 </head>
 
 <body>
-  <!-- Для скрытия меню и смены иконки в кнопке добавить класс page-header--collapsed -->
+  <!-- Для скрытия меню и смены иконки в кнопке добавить класс page-header--collapsed. Для илициализации js убрать класс page-header-nojs -->
   <header class="page-header page-header--nojs">
     <nav class="page-header__nav">
       <div class="page-header__logo">
@@ -197,13 +197,11 @@
             </p>
           </li>
         </ul>
-        <div class="contacts__map">
-          <!-- <picture>
-            <source media="(min-width: 1150px)" srcset="img/map-desktop@1x.jpg">
-            <source media="(min-width: 768px)" srcset="img/map-tablet@1x.jpg">
-            <img class="contacts__map-image" src="img/map-mobile@1x.jpg"
-              alt="Наш магазин по адресу ул. Большая Конюшенная, д. 19/8, Санкт-Петербург">
-          </picture> -->
+        <div class="contacts__map-container">
+          <iframe class="contacts__map"
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.6036253056511!2d30.320853351388983!3d59.93871916896556!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca145cc1%3A0x42b32648d8238007!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LzgsINCh0LDQvdC60YIt0J_QtdGC0LXRgNCx0YPRgNCzLCAxOTExODY!5e0!3m2!1sru!2sru!4v1589561187524!5m2!1sru!2sru"
+            width="100%" height="457" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false"
+            aria-label="Наш магазин по адресу ул. Большая Конюшенная, д. 19/8, Санкт-Петербург" tabindex="0"></iframe>
         </div>
         <div class="contacts__footer">
           <a class="contacts__button button" href="mailto:info@mimimishkashop.ru">
