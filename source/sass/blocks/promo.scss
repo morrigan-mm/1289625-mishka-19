@@ -2,9 +2,12 @@
   @include container;
   @include grey-wavy;
 
-  position: relative;
   padding-top: 25px;
-  padding-bottom: 42px;
+  padding-bottom: 22px;
+}
+
+.promo__container {
+  padding-bottom: 20px;
 }
 
 .promo__type {
@@ -65,12 +68,13 @@
 @media (min-width: $tablet-width) {
   .promo {
     padding-top: 45px;
-    padding-bottom: 68px;
+    padding-bottom: 25px;
   }
 
   .promo__container {
     display: flex;
     flex-wrap: wrap;
+    padding-bottom: 42px;
   }
 
   .promo__type {
@@ -123,6 +127,7 @@
 
 @media (min-width: $desktop-width) {
   .promo {
+    position: relative;
     padding-top: 72px;
     padding-bottom: 95px;
   }
@@ -133,6 +138,7 @@
     min-height: 636px;
     margin-left: auto;
     padding-top: 52px;
+    padding-bottom: 0;
   }
 
   .promo__type {

@@ -46,6 +46,10 @@
     background: #dfdfdf url("../img/map-tablet@1x.jpg") no-repeat center;
     background-size: cover;
     background-repeat: no-repeat;
+
+    @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+      background-image: url("../img/map-tablet@2x.jpg");
+    }
   }
 }
 
@@ -134,6 +138,10 @@
 
     &::before {
       background-image: url("../img/map-desktop@1x.jpg");
+
+      @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+        background-image: url("../img/map-desktop@2x.jpg");
+      }
     }
   }
 

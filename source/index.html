@@ -6,6 +6,7 @@
   <title>HTML Academy: Мишка</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="css/style.css">
+  <script src="js/picturefill.min.js" async></script>
 </head>
 
 <body>
@@ -108,9 +109,11 @@
           </div>
           <div class="promo__image-wrapper">
             <picture>
-              <source media="(min-width: 1150px)" srcset="img/triple-set-desktop@1x.jpg">
-              <source media="(min-width: 768px)" srcset="img/triple-set-tablet@1x.jpg">
-              <img class="promo__image" src="img/triple-set-mobile@1x.jpg" alt="Набор вязаных корзинок ручной работы">
+              <source media="(min-width: 1150px)"
+                srcset="img/triple-set-desktop@1x.jpg, img/triple-set-desktop@2x.jpg 2x">
+              <source media="(min-width: 768px)" srcset="img/triple-set-tablet@1x.jpg, img/triple-set-tablet@2x.jpg 2x">
+              <img class="promo__image" src="img/triple-set-mobile@1x.jpg" srcset="img/triple-set-mobile@2x.jpg 2x"
+                alt="Набор вязаных корзинок ручной работы">
             </picture>
           </div>
           <div class="promo__footer">

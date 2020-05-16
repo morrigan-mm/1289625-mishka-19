@@ -6,6 +6,7 @@
   <title>HTML Academy: Мишка - Каталог</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="css/style.css">
+  <script src="js/picturefill.min.js" async></script>
 </head>
 
 <body>
@@ -81,9 +82,12 @@
           <div class="card">
             <a class="card__image-wrapper" href="#">
               <picture>
-                <source media="(min-width: 1150px)" srcset="img/photo-hare-desktop@1x.jpg">
-                <source media="(min-width: 768px)" srcset="img/photo-hare-tablet@1x.jpg">
-                <img class="card__image" src="img/photo-hare-mobile@1x.jpg" alt="Вязаная игрушка заяц">
+                <source media="(min-width: 1150px)"
+                  srcset="img/photo-hare-desktop@1x.jpg, img/photo-hare-desktop@2x.jpg 2x">
+                <source media="(min-width: 768px)"
+                  srcset="img/photo-hare-tablet@1x.jpg, img/photo-hare-tablet@2x.jpg 2x">
+                <img class="card__image" src="img/photo-hare-mobile@1x.jpg" srcset="img/photo-hare-mobile@2x.jpg 2x"
+                  alt="Вязаная игрушка заяц">
               </picture>
             </a>
             <div class="card__content">
@@ -116,9 +120,12 @@
           <div class="card">
             <a class="card__image-wrapper" href="#">
               <picture>
-                <source media="(min-width: 1150px)" srcset="img/photo-bowl-desktop@1x.jpg">
-                <source media="(min-width: 768px)" srcset="img/photo-bowl-tablet@1x.jpg">
-                <img class="card__image" src="img/photo-bowl-mobile@1x.jpg" alt="Вязаная корзинка для белья">
+                <source media="(min-width: 1150px)"
+                  srcset="img/photo-bowl-desktop@1x.jpg, img/photo-bowl-desktop@2x.jpg 2x">
+                <source media="(min-width: 768px)"
+                  srcset="img/photo-bowl-tablet@1x.jpg, img/photo-bowl-tablet@2x.jpg 2x">
+                <img class="card__image" src="img/photo-bowl-mobile@1x.jpg" srcset="img/photo-bowl-mobile@2x.jpg 2x"
+                  alt="Вязаная корзинка для белья">
               </picture>
             </a>
             <div class="card__content">
@@ -151,9 +158,12 @@
           <div class="card">
             <a class="card__image-wrapper" href="#">
               <picture>
-                <source media="(min-width: 1150px)" srcset="img/photo-toys-desktop@1x.jpg">
-                <source media="(min-width: 768px)" srcset="img/photo-toys-tablet@1x.jpg">
-                <img class="card__image" src="img/photo-toys-mobile@1x.jpg" alt="Вязаная корзинка для игрушек">
+                <source media="(min-width: 1150px)"
+                  srcset="img/photo-toys-desktop@1x.jpg, img/photo-toys-desktop@2x.jpg 2x">
+                <source media="(min-width: 768px)"
+                  srcset="img/photo-toys-tablet@1x.jpg, img/photo-toys-tablet@2x.jpg 2x">
+                <img class="card__image" src="img/photo-toys-mobile@1x.jpg" srcset="img/photo-toys-mobile@2x.jpg 2x"
+                  alt="Вязаная корзинка для игрушек">
               </picture>
             </a>
             <div class="card__content">
@@ -190,9 +200,10 @@
           <h3 class="video__title">Процесс производства</h3>
           <div class="video__content player">
             <picture>
-              <source media="(min-width: 1150px)" srcset="img/video-desktop@1x.jpg">
-              <source media="(min-width: 768px)" srcset="img/video-tablet@1x.jpg">
-              <img class="player__media" src="img/video-mobile@1x.jpg" alt="Процесс производства">
+              <source media="(min-width: 1150px)" srcset="img/video-desktop@1x.jpg, img/video-desktop@2x.jpg 2x">
+              <source media="(min-width: 768px)" srcset="img/video-tablet@1x.jpg, img/video-tablet@2x.jpg 2x">
+              <img class="player__media" src="img/video-mobile@1x.jpg" srcset="img/video-mobile@2x.jpg 2x"
+                alt="Процесс производства">
             </picture>
             <button class="player__button" type="button">Запустить видео</button>
           </div>
