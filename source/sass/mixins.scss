@@ -126,6 +126,11 @@
     background-repeat: repeat-x;
     background-position: bottom;
     background-size: contain;
+
+    @media (min-width: $desktop-width) {
+      height: 37px;
+      bottom: -20px;
+    }
   }
 }
 
