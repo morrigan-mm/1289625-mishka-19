@@ -2,9 +2,12 @@
   @include container;
   @include grey-wavy;
 
-  position: relative;
   padding-top: 36px;
-  padding-bottom: 51px;
+  padding-bottom: 22px;
+}
+
+.reviews__container {
+  padding-bottom: 29px;
 }
 
 .reviews__item {
@@ -39,12 +42,18 @@
 @media (min-width: $tablet-width) {
   .reviews {
     padding-top: 80px;
-    padding-bottom: 130px;
+    padding-bottom: 23px;
     background: url("../img/review@1x.jpg") no-repeat top left;
+
+    @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+      background-image: url("../img/review@2x.jpg");
+      background-size: 350px auto;
+    }
   }
 
   .reviews__container {
     position: relative;
+    padding-bottom: 107px;
   }
 
   .reviews__content {
@@ -79,6 +88,7 @@
 
 @media (min-width: $desktop-width) {
   .reviews {
+    position: relative;
     padding-top: 70px;
     padding-bottom: 188px;
     background-position-x: 49px;
@@ -87,6 +97,7 @@
   .reviews__container {
     width: 876px;
     margin-left: auto;
+    padding-bottom: 0;
   }
 
   .reviews__text {

@@ -2,28 +2,6 @@
   &--phone,
   &--email {
     position: relative;
-
-    &::after {
-      content: "";
-      position: absolute;
-      width: 32px;
-      height: 100%;
-      top: 0;
-      right: 0;
-      opacity: 0.2;
-    }
-  }
-
-  &--phone {
-    &::after {
-      background: url("../img/icon-phone.svg") no-repeat center;
-    }
-  }
-
-  &--email {
-    &::after {
-      background: url("../img/icon-mail.svg") no-repeat center;
-    }
   }
 
   &--textbox {
@@ -72,7 +50,7 @@
       left: 20px - 16px / 2;
       width: 16px;
       height: 16px;
-      background-color: #62d1ba;
+      background-color: $seafoam-blue-two;
       border-radius: 50%;
     }
   }
@@ -107,7 +85,7 @@
   &:hover,
   &:focus,
   &:active {
-    border-bottom-color: #62d1ba;
+    border-bottom-color: $seafoam-blue-two;
   }
 
   &--iconed {
@@ -125,7 +103,7 @@
     &:hover,
     &:focus,
     &:active {
-      border-color: #62d1ba;
+      border-color: $seafoam-blue-two;
     }
   }
 
@@ -138,9 +116,24 @@
   }
 }
 
+.field__input-icon {
+  position: absolute;
+  content: "";
+  top: 14px;
+  right: 0;
+  opacity: 0.2;
+}
+
+.field__input--iconed:hover + .field__input-icon,
+.field__input--iconed:focus + .field__input-icon,
+.field__input--iconed:active + .field__input-icon {
+  opacity: 1;
+  color: $seafoam-blue-two;
+}
+
 .field__input--hidden:hover + .field__label::before,
 .field__input--hidden:focus + .field__label::before {
-  border-color: #62d1ba;
+  border-color: $seafoam-blue-two;
 }
 
 .field__input--hidden:active + .field__label::before {
@@ -227,5 +220,9 @@
 
       padding-right: 24px;
     }
+  }
+
+  .field__input-icon {
+    right: 27px;
   }
 }
