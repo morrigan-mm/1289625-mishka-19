@@ -66,9 +66,14 @@
     margin-bottom: 60px;
   }
 
+  .video__card {
+    border-color: transparent;
+  }
+
   .video__container {
     margin-top: 455px;
     padding-top: 16px;
+    border: 1px solid $white-three;
 
     &:hover,
     &:focus {

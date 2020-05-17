@@ -34,7 +34,10 @@
 
   .catalog__item {
     width: 316px;
-    margin-bottom: auto;
+
+    &:last-child {
+      margin-bottom: 53px;
+    }
   }
 
   .catalog__item:not(:nth-child(3n)) {
