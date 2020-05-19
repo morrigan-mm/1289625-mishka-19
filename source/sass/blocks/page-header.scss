@@ -1,6 +1,5 @@
 .page-header {
   position: relative;
-  // padding-bottom: 20px;
   background-color: #f9f9f9;
   overflow: hidden;
 
@@ -81,17 +80,14 @@
 .page-header__link-icon {
   position: absolute;
   left: 0;
-
+  color: $black;
   opacity: 0.2;
 }
 
 .page-header__link:hover .page-header__link-icon,
 .page-header__link:focus .page-header__link-icon {
+  color: $seafoam-blue;
   opacity: 1;
-
-  path {
-    fill: $seafoam-blue;
-  }
 }
 
 .page-header__list--third .page-header__item {
