@@ -1,3 +1,5 @@
+svg4everybody();
+
 var header = document.querySelector(".page-header");
 var button = header.querySelector(".page-header__toggle");
 

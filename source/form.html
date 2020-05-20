@@ -5,11 +5,16 @@
   <meta charset="utf-8">
   <title>HTML Academy: Мишка - Форма заказа</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="css/style.css">
-  <script src="js/picturefill.min.js" async></script>
+  <link rel="stylesheet" href="css/style.min.css">
+  <script src="js/picturefill.min.js" async=""></script>
+  <script src="js/svg4everybody.min.js"></script>
 </head>
 
 <body>
+  <div style="display: none;">
+    <include src="build/img/sprite.svg"></include>
+  </div>
+
   <!-- Для скрытия меню и смены иконки в кнопке добавить класс page-header--collapsed -->
   <header class="page-header page-header--inner-page page-header--nojs">
     <nav class="page-header__nav">
@@ -86,7 +91,7 @@
             <ul class="field-list field-list--radio" role="none">
               <li class="field-list__item field">
                 <input class="field__input field__input--hidden" type="radio" name="type" value="accessories"
-                  id="accessories" checked>
+                  id="accessories" checked="">
                 <label class="field__label field__label--radio" for="accessories">Аксессуар для интерьера</label>
               </li>
               <li class="field-list__item field">
@@ -104,12 +109,12 @@
             <ul class="field-list field-list--checkbox" role="none">
               <li class="field-list__item field">
                 <input class="field__input field__input--hidden" type="checkbox" name="color" value="white" id="white"
-                  checked>
+                  checked="">
                 <label class="field__label field__label--checkbox" for="white">Белый</label>
               </li>
               <li class="field-list__item field">
                 <input class="field__input field__input--hidden" type="checkbox" name="color" value="grey" id="grey"
-                  checked>
+                  checked="">
                 <label class="field__label field__label--checkbox" for="grey">Серый</label>
               </li>
               <li class="field-list__item field">
@@ -141,12 +146,13 @@
             <ul class="field-list field-list--textfield" role="none">
               <li class="field-list__item field-list__item--textfield field">
                 <label class="field__label field__label--textfield" for="name">Имя:</label>
-                <input class="field__input" type="text" name="name" id="name" placeholder="Введите ваше имя*" required>
+                <input class="field__input" type="text" name="name" id="name" placeholder="Введите ваше имя*"
+                  required="">
               </li>
               <li class="field-list__item field-list__item--textfield field">
                 <label class="field__label field__label--textfield" for="surname">Фамилия:</label>
                 <input class="field__input" type="text" name="surname" id="surname" placeholder="Укажите фамилию*"
-                  required>
+                  required="">
               </li>
               <li class="field-list__item field-list__item--textfield field">
                 <label class="field__label field__label--textfield" for="patronymic">Отчество:</label>
@@ -165,7 +171,7 @@
             <div class="field field--phone">
               <input class="field__input field__input--iconed" type="tel" name="phone_number"
                 pattern="\+7\s?[0-9]{3}\s[0-9]{3}\s[0-9]{2}\s[0-9]{2}" id="phone" placeholder="+7 ХХХ ХХХ ХХ ХХ*"
-                required>
+                required="">
               <svg class="field__input-icon" width="25" height="24">
                 <use xlink:href="img/sprite.svg#icon-phone"></use>
               </svg>
@@ -177,7 +183,7 @@
             </label>
             <div class="field field--email">
               <input class="field__input field__input--iconed" type="email" name="e_mail" id="e-mail"
-                placeholder="Ваш Email*" required>
+                placeholder="Ваш Email*" required="">
               <svg class="field__input-icon" width="32" height="32">
                 <use xlink:href="img/sprite.svg#icon-mail"></use>
               </svg>

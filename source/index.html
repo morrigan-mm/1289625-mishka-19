@@ -5,11 +5,16 @@
   <meta charset="utf-8">
   <title>HTML Academy: Мишка</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="css/style.css">
-  <script src="js/picturefill.min.js" async></script>
+  <link rel="stylesheet" href="css/style.min.css">
+  <script src="js/picturefill.min.js" async=""></script>
+  <script src="js/svg4everybody.min.js"></script>
 </head>
 
 <body>
+  <div style="display: none;">
+    <include src="build/img/sprite.svg"></include>
+  </div>
+
   <!-- Для скрытия меню и смены иконки в кнопке добавить класс page-header--collapsed. Для илициализации js убрать класс page-header-nojs -->
   <header class="page-header page-header--nojs">
     <nav class="page-header__nav">
@@ -102,17 +107,18 @@
           <div class="promo__image-wrapper">
             <picture>
               <source type="image/webp" media="(min-width: 1150px)"
-                srcset="img/webp/triple-set-desktop.webp 1x, img/webp/triple-set-desktop@2x.webp 2x">
+                srcset="img/content/webp/triple-set-desktop.webp 1x, img/content/webp/triple-set-desktop@2x.webp 2x">
               <source type="image/webp" media="(min-width: 768px)"
-                srcset="img/webp/triple-set-tablet.webp 1x, img/webp/triple-set-tablet@2x.webp 2x">
+                srcset="img/content/webp/triple-set-tablet.webp 1x, img/content/webp/triple-set-tablet@2x.webp 2x">
               <source type="image/webp"
-                srcset="img/webp/triple-set-mobile.webp 1x, img/webp/triple-set-mobile@2x.webp 2x">
+                srcset="img/content/webp/triple-set-mobile.webp 1x, img/content/webp/triple-set-mobile@2x.webp 2x">
 
               <source media="(min-width: 1150px)"
-                srcset="img/triple-set-desktop@1x.jpg, img/triple-set-desktop@2x.jpg 2x">
-              <source media="(min-width: 768px)" srcset="img/triple-set-tablet@1x.jpg, img/triple-set-tablet@2x.jpg 2x">
-              <img class="promo__image" src="img/triple-set-mobile@1x.jpg" srcset="img/triple-set-mobile@2x.jpg 2x"
-                alt="Набор вязаных корзинок ручной работы">
+                srcset="img/content/triple-set-desktop@1x.jpg, img/content/triple-set-desktop@2x.jpg 2x">
+              <source media="(min-width: 768px)"
+                srcset="img/content/triple-set-tablet@1x.jpg, img/content/triple-set-tablet@2x.jpg 2x">
+              <img class="promo__image" src="img/content/triple-set-mobile@1x.jpg"
+                srcset="img/content/triple-set-mobile@2x.jpg 2x" alt="Набор вязаных корзинок ручной работы">
             </picture>
           </div>
           <div class="promo__footer">
@@ -272,7 +278,7 @@
           <legend class="cart-form__title">Выберите размер:</legend>
           <ul class="cart-form__list" role="none">
             <li class="cart-form__item">
-              <input class="cart-form__input" type="radio" name="size" value="small" id="small" checked>
+              <input class="cart-form__input" type="radio" name="size" value="small" id="small" checked="">
               <label class="cart-form__label" for="small">S</label>
             </li>
             <li class="cart-form__item">
