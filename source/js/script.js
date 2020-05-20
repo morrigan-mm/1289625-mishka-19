@@ -15,7 +15,8 @@ var overlay = document.querySelector(".modal__overlay");
 var modalOpenButtons = document.querySelectorAll(".button-modal-open-js");
 
 for (var i = 0; i < modalOpenButtons.length; i++) {
-  modalOpenButtons[i].addEventListener("click", function () {
+  modalOpenButtons[i].addEventListener("click", function (e) {
+    e.preventDefault();
     modal.classList.add("modal--show");
     document.body.style.overflow = "hidden";
   });
