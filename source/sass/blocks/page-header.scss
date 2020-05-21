@@ -24,18 +24,8 @@
   display: flex;
 }
 
-.page-header__logo .page-header__link {
-  margin: 22px auto;
-  line-height: 0;
-
-  &:hover,
-  &:focus {
-    opacity: 0.6;
-  }
-
-  &:active {
-    opacity: 0.3;
-  }
+.page-header__logo-image {
+  pointer-events: none;
 }
 
 .page-header__link {
@@ -51,6 +41,20 @@
   &:hover,
   &:focus {
     color: transparentize($title-color, 0.4);
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
+}
+
+.page-header__logo .page-header__link {
+  margin: 22px auto;
+  line-height: 0;
+
+  &:hover,
+  &:focus {
+    opacity: 0.6;
   }
 
   &:active {
@@ -82,6 +86,7 @@
   left: 0;
   color: $black;
   opacity: 0.2;
+  pointer-events: none;
 }
 
 .page-header__link:hover .page-header__link-icon,
