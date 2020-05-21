@@ -6,9 +6,10 @@
   background-color: $white-two;
 
   &--main {
+    height: 489px;
     padding-bottom: 0;
     background: #f9f9f9 url("../img/hero-mobile@1x.jpg") no-repeat;
-    background-position: 50% -25%;
+    background-position: 50% -15%;
 
     @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
       background-image: url("../img/hero-mobile@2x.jpg");
@@ -26,10 +27,6 @@
   line-height: 1.11;
   text-align: center;
   color: $title-color;
-}
-
-.intro--main .intro__title {
-  margin-bottom: 125px;
 }
 
 @media (min-width: $tablet-width) {

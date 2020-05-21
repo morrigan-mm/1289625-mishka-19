@@ -5,25 +5,22 @@
   <meta charset="utf-8">
   <title>HTML Academy: Мишка</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preload" href="fonts/opensans.woff2" as="font">
   <link rel="stylesheet" href="css/style.min.css">
-  <script src="js/picturefill.min.js" async=""></script>
-  <script src="js/svg4everybody.min.js"></script>
+  <script src="js/vendors/picturefill.min.js" async=""></script>
+  <script src="js/vendors/svg4everybody.min.js"></script>
 </head>
 
 <body>
-  <div style="display: none;">
-    <include src="build/img/sprite.svg"></include>
-  </div>
-
   <!-- Для скрытия меню и смены иконки в кнопке добавить класс page-header--collapsed. Для илициализации js убрать класс page-header-nojs -->
   <header class="page-header page-header--nojs">
     <nav class="page-header__nav">
       <div class="page-header__logo">
         <a class="page-header__link" href="#">
-          <picture>
+          <picture class="page-header__logo-picture">
             <source media="(min-width: 1150px)" srcset="img/logo-desktop.svg">
             <source media="(min-width: 768px)" srcset="img/logo-tablet.svg">
-            <img class="page-header__logo-image" src="img/logo-mobile.svg" alt="Логотип магазина «Мишка»">
+            <img src="img/logo-mobile.svg" alt="Логотип магазина «Мишка»">
           </picture>
         </a>
       </div>
@@ -224,7 +221,7 @@
     <div class="page-footer__container">
       <div class="page-footer__item page-footer__item--logo">
         <a class="page-footer__logo" href="index.html">
-          <svg width="102" height="34">
+          <svg class="page-footer__logo-icon" width="102" height="34">
             <use xlink:href="img/sprite.svg#logo-footer"></use>
           </svg>
         </a>
@@ -233,7 +230,7 @@
       <ul class="page-footer__item social">
         <li class="social__item">
           <a class="social__link social__link--instagram" href="#">
-            <svg width="22" height="21">
+            <svg class="social__icon" width="22" height="21">
               <use xlink:href="img/sprite.svg#icon-insta"></use>
             </svg>
             Инстаграм
@@ -241,7 +238,7 @@
         </li>
         <li class="social__item">
           <a class="social__link social__link--facebook" href="#">
-            <svg width="15" height="28">
+            <svg class="social__icon" width="15" height="28">
               <use xlink:href="img/sprite.svg#icon-fb"></use>
             </svg>
             Фейсбук
@@ -249,7 +246,7 @@
         </li>
         <li class="social__item">
           <a class="social__link social__link--twitter" href="#">
-            <svg width="23" height="20">
+            <svg class="social__icon" width="23" height="20">
               <use xlink:href="img/sprite.svg#icon-twitter"></use>
             </svg>
             Твиттер
@@ -296,7 +293,7 @@
     </div>
   </section>
 
-  <script src="js/script.js"></script>
+  <script src="js/script.min.js"></script>
 </body>
 
 </html>
