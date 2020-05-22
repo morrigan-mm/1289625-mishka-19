@@ -69,6 +69,7 @@
   .category-links {
     @include container;
 
+    height: 100%;
     align-items: flex-end;
     flex-direction: row;
     margin-top: auto;

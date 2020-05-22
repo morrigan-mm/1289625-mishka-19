@@ -20,7 +20,19 @@ gulp.task("clean", function () {
   return del("build");
 });
 
-gulp.task("css", function () {
+gulp.task("css-dev", function () {
+  return gulp
+    .src("source/sass/style.scss")
+    .pipe(plumber())
+    .pipe(sourcemap.init())
+    .pipe(sass())
+    .pipe(postcss([autoprefixer()]))
+    .pipe(sourcemap.write("."))
+    .pipe(gulp.dest("build/css"))
+    .pipe(server.stream());
+});
+
+gulp.task("css-prod", function () {
   return gulp
     .src("source/sass/style.scss")
     .pipe(plumber())
@@ -111,7 +123,7 @@ gulp.task("server", function () {
     ui: false,
   });
 
-  gulp.watch("source/sass/**/*.scss", gulp.series("css"));
+  gulp.watch("source/sass/**/*.scss", gulp.series("css-prod", "css-dev"));
   gulp.watch(
     "source/img/content/*.svg",
     gulp.series("sprite", "html", "refresh")
@@ -126,6 +138,16 @@ gulp.task("refresh", function (done) {
 
 gulp.task(
   "build",
-  gulp.series("clean", "copy", "js", "css", "images", "webp", "sprite", "html")
+  gulp.series(
+    "clean",
+    "copy",
+    "js",
+    "css-prod",
+    "css-dev",
+    "images",
+    "webp",
+    "sprite",
+    "html"
+  )
 );
 gulp.task("start", gulp.series("build", "server"));
