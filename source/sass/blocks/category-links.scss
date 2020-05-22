@@ -1,6 +1,9 @@
 .category-links {
   display: flex;
   flex-flow: column wrap;
+  justify-content: flex-end;
+  height: 100%;
+  overflow: hidden;
 }
 
 .category-links__item {
@@ -69,7 +72,6 @@
   .category-links {
     @include container;
 
-    height: 100%;
     align-items: flex-end;
     flex-direction: row;
     margin-top: auto;
